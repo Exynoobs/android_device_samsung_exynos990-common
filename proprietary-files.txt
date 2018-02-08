@@ -491,7 +491,6 @@ vendor/etc/libse-gto-hal.conf
 -vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
--vendor/lib/liboemcrypto.so
 -vendor/lib/libwvhidl.so
 
 # Wi-Fi
