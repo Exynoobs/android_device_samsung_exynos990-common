@@ -19,6 +19,10 @@ COMMON_PATH := device/samsung/exynos990-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/exynos990-common/exynos990-common-vendor.mk)
 
+# AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
