@@ -60,9 +60,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/etc/libnfc-nci.conf)
-            sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
-            ;;
         vendor/etc/media_codecs_performance.xml)
             sed -i '133,163d' "${2}"
             ;;
