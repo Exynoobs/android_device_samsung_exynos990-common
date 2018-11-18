@@ -16,7 +16,7 @@ ro.hardware.egl=mali
 ro.zygote.disable_gl_preload=true
 
 # wifi direct
-wifi.direct.interface=p2p0
+wifi.direct.interface=p2p-dev-wlan0
 
 ### KEYSTORE
 ro.security.keystore.keytype=sakv2,gak,sgak
