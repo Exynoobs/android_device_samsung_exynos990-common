@@ -9,6 +9,7 @@
 ####################################
 # Data Files
 
+/data/per_boot(/.*)?           u:object_r:per_boot_file:s0
 /data/vendor/eden/gpu(/.*)?    u:object_r:data_eden_gpu_file:s0
 /data/vendor/mediadrm(/.*)?    u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/nfc(/.*)?         u:object_r:nfc_vendor_data_file:s0

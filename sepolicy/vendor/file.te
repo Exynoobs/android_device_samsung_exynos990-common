@@ -6,6 +6,7 @@ type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type npu_vendor_data_file, file_type, data_file_type;
+type per_boot_file, file_type, data_file_type, core_data_file_type;
 type vendor_eden_gpu_vendor_file, file_type, vendor_file_type;
 
 # debug types
