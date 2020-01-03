@@ -261,6 +261,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     secril_config_svc
 
+# SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0.vendor:64 \
