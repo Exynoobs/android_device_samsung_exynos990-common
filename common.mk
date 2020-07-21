@@ -187,6 +187,8 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/samsung/exynos990-common/overlay/hardware/samsung/AdvancedDisplay
 
 # Permissions
 PRODUCT_COPY_FILES += \
