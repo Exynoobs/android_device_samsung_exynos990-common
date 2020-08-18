@@ -1,11 +1,11 @@
-type vendor_nfc_prop, property_type;
-type vendor_factory_prop, property_type;
-type persist_rmnet_prop, property_type;
-type persist_data_wda_prop, property_type;
-type persist_data_df_prop, property_type;
-type vendor_camera_prop, property_type;
-type debug_level_prop, property_type;
-type product_ship_prop, property_type;
-type vendor_sehal_init_prop, property_type;
-type vendor_hwc_prop, property_type;
-type sf_hs_mode_prop, property_type;
+vendor_internal_prop(debug_level_prop)
+vendor_internal_prop(persist_data_df_prop)
+vendor_internal_prop(persist_data_wda_prop)
+vendor_internal_prop(persist_rmnet_prop)
+vendor_internal_prop(product_ship_prop)
+vendor_internal_prop(sf_hs_mode_prop)
+vendor_internal_prop(vendor_camera_prop)
+vendor_internal_prop(vendor_factory_prop)
+vendor_internal_prop(vendor_hwc_prop)
+vendor_internal_prop(vendor_nfc_prop)
+vendor_internal_prop(vendor_sehal_init_prop)
