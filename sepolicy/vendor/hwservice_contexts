@@ -1,9 +1,6 @@
 # A2DP Offload
 vendor.samsung_slsi.hardware.ExynosA2DPOffload::IExynosA2DPOffload    u:object_r:hal_vendor_a2dpoffload_hwservice:s0
 
-# Camera
-vendor.samsung.hardware.camera.provider::ISehCameraProvider           u:object_r:hal_camera_hwservice:s0
-
 # Eden
 vendor.samsung_slsi.hardware.eden_runtime::IEdenruntime               u:object_r:hal_vendor_eden_runtime_hwservice:s0
 
