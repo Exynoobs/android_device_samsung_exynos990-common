@@ -125,30 +125,18 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
 # Camera
--vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
--vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
--vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
-vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 -vendor/lib/camera.device@1.0-impl.so
 -vendor/lib/camera.device@3.2-impl.so
 -vendor/lib/camera.device@3.3-impl.so
 -vendor/lib/camera.device@3.4-impl.so
 -vendor/lib/camera.device@3.5-impl.so
 -vendor/lib/libtriplepreview_interface.so
--vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so
--vendor/lib/vendor.samsung.hardware.camera.device@5.0.so
--vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so
--vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
 -vendor/lib64/camera.device@1.0-impl.so
 -vendor/lib64/camera.device@3.2-impl.so
 -vendor/lib64/camera.device@3.3-impl.so
 -vendor/lib64/camera.device@3.4-impl.so
 -vendor/lib64/camera.device@3.5-impl.so
 -vendor/lib64/libtriplepreview_interface.so
--vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
--vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
--vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
--vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 
 # Camera dependencies
 -vendor/lib/libSEF.quram.so
