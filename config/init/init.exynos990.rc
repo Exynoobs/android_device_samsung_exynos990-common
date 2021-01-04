@@ -949,7 +949,6 @@ on fs
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
-    restorecon_recursive /data
 
     chown radio system /mnt/vendor/efs
     chmod 0771 /mnt/vendor/efs
