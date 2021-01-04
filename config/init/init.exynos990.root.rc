@@ -168,12 +168,6 @@ on post-fs-data
     # mldap
     mkdir /efs/prov_data 0770 radio system
 
-    # create directory for MediaDrm plug-ins - give drm the read/write access to
-    # the following directory.
-    mkdir /data/mediadrm 0770 mediadrm mediadrm
-
-    mkdir /data/anr 0775 system system
-
     # MST Factory Test
     chown system system /sys/class/mstldo/mst_drv/transmit
     chmod 0660 /sys/class/mstldo/mst_drv/transmit
