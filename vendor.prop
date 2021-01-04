@@ -22,7 +22,6 @@ persist.sys.sf.native_mode=2
 
 ### KEYSTORE
 ro.hardware.keystore=mdfpp
-ro.security.keystore.keytype=sakv2,gak,sgak
 
 ### OPENGLES
 ro.opengles.version=196610
