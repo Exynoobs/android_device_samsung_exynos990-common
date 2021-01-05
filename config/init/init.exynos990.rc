@@ -906,12 +906,6 @@ on boot
 #Samsung Members logging
     setprop persist.vendor.members.cp_sup on
 
-on nonencrypted
-    mkdir /data/misc/mcRegistry 0775 system drmrpc
-
-on property:vold.decrypt=trigger_restart_framework
-    mkdir /data/misc/mcRegistry 0775 system drmrpc
-
 on property:ro.factory.factory_binary=factory
     # ASV-G Spec
     chmod 0660 /sys/power/asv_g_spec/cpucl0_fused_volt
