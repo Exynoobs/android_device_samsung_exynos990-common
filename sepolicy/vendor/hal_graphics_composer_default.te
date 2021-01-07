@@ -1,5 +1,7 @@
 # hal_graphics_composer_default.te
 
+get_prop(hal_graphics_composer_default, vendor_camera_prop)
+
 allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { create bind read setopt };
 
 hal_client_domain(hal_graphics_composer_default, hal_graphics_allocator);
@@ -17,3 +19,5 @@ allow hal_graphics_composer_default vendor_surfaceflinger_vndservice:service_man
 r_dir_file(hal_graphics_composer_default, sysfs_decon);
 
 allow hal_graphics_composer_default sysfs_decon_writable:file rw_file_perms;
+
+allow hal_graphics_composer_default system_prop:file map;

@@ -11,6 +11,7 @@ genfscon debugfs /ion                                      u:object_r:debugfs_io
 genfscon sysfs /devices/platform/10730000.pinctrl/gpiochip51/gpio/gpio143/value                 u:object_r:sysfs_gps_writable:s0
 genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input1/enabled               u:object_r:sysfs_touchscreen_writable:s0
 genfscon sysfs /devices/platform/15940000.speedy/i2c-16/16-0000/s2mps19-rtc/rtc/rtc0/hctosys    u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/15c40000.adc/iio						u:object_r:sysfs_iio:s0
 genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video6/name                           u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video7/name                           u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/19050000.decon_f/hiber_exit                                    u:object_r:sysfs_decon:s0
@@ -18,11 +19,12 @@ genfscon sysfs /devices/platform/19050000.decon_f/psr_info                      
 genfscon sysfs /devices/platform/19050000.decon_f/vsync                                         u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/19060000.decon_s/vsync                                         u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/19070000.decon_t/vsync                                         u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                                 u:object_r:sysfs_bt_writable:s0
 genfscon sysfs /devices/platform/npu_exynos/version                                             u:object_r:sysfs_npu_version:s0
+genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/brightness				u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/max_brightness                     u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/lcd_type                                 u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/SVC_OCTA                                 u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/window_type                              u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/system/chip-id/revision                                                 u:object_r:sysfs_chipid:s0
-genfscon sysfs /devices/virtual/camera/rear/fw_update                                           u:object_r:sysfs_camera_writable:s0
-genfscon sysfs /devices/virtual/camera/rear/rear_awb_master                                     u:object_r:sysfs_camera_writable:s0
-genfscon sysfs /devices/virtual/camera/rear/rear_awb_module                                     u:object_r:sysfs_camera_writable:s0
-genfscon sysfs /devices/virtual/camera/rear/rear_sensorid                                       u:object_r:sysfs_camera_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                         u:object_r:sysfs_sensorhub_writable:s0

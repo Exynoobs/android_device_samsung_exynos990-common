@@ -1,0 +1,2 @@
+allow rild hal_camera_default:dir search;
+allow rild hal_camera_default:file { read open getattr };

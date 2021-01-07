@@ -2,5 +2,6 @@
 
 allow domain debugfs_ion_dma:dir search;
 allow domain debugfs_trace_marker:file getattr;
-
+allow domain debugfs_mali_mem:dir search;
+allow domain debugfs_mali:dir search;
 dontaudit domain vendor_shimmed_lib:file { read getattr };

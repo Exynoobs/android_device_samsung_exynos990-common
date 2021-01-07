@@ -20,6 +20,8 @@
 
 # Camera
 /dev/m2m1shot_scaler0    u:object_r:m2m1shot_device:s0
+/dev/jsqz                u:object_r:jsqz_device:s0
+/dev/vertex10		 u:object_r:npu_device:s0
 
 # Graphics
 /dev/g2d          u:object_r:graphics_device:s0
@@ -45,8 +47,17 @@
 /sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)    u:object_r:sysfs_battery:s0
 /sys/devices/platform/sec-direct-charger/power_supply(/.*)           u:object_r:sysfs_battery:s0
 
+# Camera
+/sys/devices/virtual/camera(/.*)/fw_update            u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera/flash/rear_flash          u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
+
 # Block
 /sys/devices/platform/13100000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
+
+# Mem boost
+/sys/kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0
 
 # MDNIE
 /sys/devices/platform/panel_drv@0/lcd/panel/mdnie(/.*)    u:object_r:sysfs_lcd_writable:s0
@@ -65,11 +76,10 @@
 
 
 
-
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.clearkey                               u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                               u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]-service\.samsung                          u:object_r:hal_keymaster_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service                         u:object_r:hal_keymaster_strongbox_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service                         u:object_r:hal_keymaster_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@[0-9]\.[0-9]-service\.eden-drv                    u:object_r:hal_neuralnetworks_eden_drv_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@[0-9]\.[0-9]-service\.exynos990                              u:object_r:hal_usb_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@[0-9]\.[0-9]-service\.samsung                           u:object_r:hal_vibrator_default_exec:s0

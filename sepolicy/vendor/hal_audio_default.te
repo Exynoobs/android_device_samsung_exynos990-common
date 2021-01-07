@@ -1,8 +1,8 @@
 # hal_audio_default.te
-
+dontaudit hal_audio_default radio_prop:file r_file_perms;
 get_prop(hal_audio_default, vendor_radio_prop)
 allow hal_audio_default vts_fio_device:chr_file rw_file_perms;
-
+allow hal_audio_default hal_vendor_a2dpoffload_hwservice:hwservice_manager find;
 allow hal_audio_default efs_file:dir r_dir_perms;
 r_dir_file(hal_audio_default, sec_efs_file);
 r_dir_file(hal_audio_default, imei_efs_file);
