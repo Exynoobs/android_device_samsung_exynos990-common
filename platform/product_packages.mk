@@ -59,6 +59,10 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung
 
+### FrameRateTile
+PRODUCT_PACKAGES += \
+    FrameRateTile
+
 ### GATEKEEPER
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
