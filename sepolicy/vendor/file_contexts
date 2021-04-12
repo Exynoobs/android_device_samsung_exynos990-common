@@ -44,10 +44,11 @@
 ### SYSFS
 
 # Battery
-/sys/devices/platform/105b0000.hsi2c/i2c-5(/.*)                      u:object_r:sysfs_battery:s0
-/sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)    u:object_r:sysfs_battery:s0
-/sys/devices/platform/sec-direct-charger/power_supply(/.*)           u:object_r:sysfs_battery:s0
-/sys/devices/platform/battery/power_supply/battery/wc_tx_en          u:object_r:sysfs_battery_writable:s0
+/sys/devices/platform/105b0000.hsi2c/i2c-5(/.*)                           u:object_r:sysfs_battery:s0
+/sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)         u:object_r:sysfs_battery:s0
+/sys/devices/platform/sec-direct-charger/power_supply(/.*)                u:object_r:sysfs_battery:s0
+/sys/devices/platform/battery/power_supply/battery/wc_tx_en               u:object_r:sysfs_battery_writable:s0
+/sys/devices/platform/battery/power_supply/battery/wc_tx_stop_capacity    u:object_r:sysfs_battery_writable:s0
 
 # Camera
 /sys/devices/virtual/camera(/.*)/fw_update            u:object_r:sysfs_camera_writable:s0
