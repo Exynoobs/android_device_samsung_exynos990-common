@@ -6,7 +6,7 @@ odm                                                     /odm                    
 
 /dev/block/platform/13100000.ufs/by-name/prism          /prism                  ext4    ro,barrier=1            nofail,first_stage_mount
 /dev/block/platform/13100000.ufs/by-name/optics         /optics                 ext4    ro,barrier=1            nofail,first_stage_mount
-/dev/block/platform/13100000.ufs/by-name/metadata       /metadata               ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable
+/dev/block/platform/13100000.ufs/by-name/metadata       /metadata               ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync wait,first_stage_mount,formattable
 
 /dev/block/platform/13100000.ufs/by-name/boot           /boot                   emmc    defaults                                                                                recoveryonly
 /dev/block/platform/13100000.ufs/by-name/recovery       /recovery               emmc    defaults                                                                                recoveryonly
