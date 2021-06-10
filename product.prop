@@ -1,11 +1,2 @@
 # Charger
 ro.charger.enable_suspend=true
-
-# fastbootd
-ro.fastbootd.available=true
-
-# Set the sample rate for the BT device
-persist.bluetooth.samsung_samplerate.supported=true
-
-
-
