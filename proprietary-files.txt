@@ -124,20 +124,6 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 -vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
-# Camera
--vendor/lib/camera.device@1.0-impl.so
--vendor/lib/camera.device@3.2-impl.so
--vendor/lib/camera.device@3.3-impl.so
--vendor/lib/camera.device@3.4-impl.so
--vendor/lib/camera.device@3.5-impl.so
--vendor/lib/libtriplepreview_interface.so
--vendor/lib64/camera.device@1.0-impl.so
--vendor/lib64/camera.device@3.2-impl.so
--vendor/lib64/camera.device@3.3-impl.so
--vendor/lib64/camera.device@3.4-impl.so
--vendor/lib64/camera.device@3.5-impl.so
--vendor/lib64/libtriplepreview_interface.so
-
 # Camera dependencies
 -vendor/lib/libSEF.quram.so
 -vendor/lib/libacryl.plugin.hdr.exynos990.so
@@ -157,6 +143,7 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib/libtriplecam_image_optical_zoom.so
 -vendor/lib/libtriplecam_video_optical_zoom.so
 -vendor/lib/libtriplecapture_interface.so
+-vendor/lib/libtriplepreview_interface.so
 -vendor/lib/libuniapi.so
 -vendor/lib/libuniplugin.so
 -vendor/lib/libvpl.so
@@ -177,6 +164,7 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib64/libtriplecam_image_optical_zoom.so
 -vendor/lib64/libtriplecam_video_optical_zoom.so
 -vendor/lib64/libtriplecapture_interface.so
+-vendor/lib64/libtriplepreview_interface.so
 -vendor/lib64/libuniapi.so
 -vendor/lib64/libuniplugin.so
 -vendor/lib64/libvkmanager_vendor.so
