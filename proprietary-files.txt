@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version XXU8DUF9, unless pinned
+# Proprietary files - from Samsung package version XXU9DUH2, unless pinned
 
 ## Audio
 vendor/etc/a2dp_audio_policy_configuration.xml
