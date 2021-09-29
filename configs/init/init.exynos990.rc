@@ -365,6 +365,9 @@ on init
 # DATA_INJECTION
     chown system radio /sys/class/sensors/ssp_sensor/data_injection_enable
 
+on property:ro.hardware=exynos990
+    setprop ro.soc.model "Exynos 990"
+
 # Configuration to G2D blocking mode
     write /sys/module/g2d_task/parameters/block_on_contension 1
 
