@@ -11,3 +11,4 @@ persist.data.df.               u:object_r:persist_data_df_prop:s0
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 vendor.seHal.init              u:object_r:vendor_sehal_init_prop:s0
 hwc.exynos.vsync_mode          u:object_r:vendor_hwc_prop:s0
+persist.sys.sf.hs_mode         u:object_r:sf_hs_mode_prop:s0
