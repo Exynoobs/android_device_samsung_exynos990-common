@@ -1,2 +1,2 @@
-allow secril_config_svc imei_efs_file:dir search;
-allow secril_config_svc imei_efs_file:file r_file_perms;
+r_dir_file(secril_config_svc, imei_efs_file);
+dontaudit secril_config_svc exported3_radio_prop:property_service set;
