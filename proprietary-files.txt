@@ -30,7 +30,6 @@ vendor/lib/lib_SoundAlive_play_plus_ver400.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
-vendor/lib/libaudio-ril.so
 vendor/lib/libaudioproxy.so
 vendor/lib/libdatamod.so
 vendor/lib/libfloatingfeature.so
@@ -63,8 +62,6 @@ vendor/lib/lib_lvacfs.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib/libsemnativecarrierfeature.so
-vendor/lib64/libsecril-client.so
-vendor/lib/libsecril-client.so
 
 ## Bluetooth
 vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
@@ -293,18 +290,18 @@ vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib/libaudio-ril.so
 vendor/lib/libmdf.so
-vendor/lib/libreference-ril.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsec_semRil.so
 vendor/lib/libsecure_storage.so
+vendor/lib/libsecril-client.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/libmdf.so
-vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
 vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecure_storage.so
+vendor/lib64/libsecril-client.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
