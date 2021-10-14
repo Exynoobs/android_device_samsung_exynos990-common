@@ -1,5 +1,14 @@
-# Set the sample rate for the BT device
-persist.bluetooth.samsung_samplerate.supported=true
+# Charger
+ro.charger.enable_suspend=true
 
 # Enable unspecialized app process pool
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# fastbootd
+ro.fastbootd.available=true
+
+# Set the sample rate for the BT device
+persist.bluetooth.samsung_samplerate.supported=true
+
+
+
