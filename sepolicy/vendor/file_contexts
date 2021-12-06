@@ -57,9 +57,6 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
 
-# Block
-/sys/devices/platform/13100000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
-
 # Mem boost
 /sys/kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0
 
