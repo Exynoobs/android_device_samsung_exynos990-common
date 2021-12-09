@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
 
 # Neuralnetworks
 PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor \
     libtextclassifier_hash.vendor
 
 # NFC
