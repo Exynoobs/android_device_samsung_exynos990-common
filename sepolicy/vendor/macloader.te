@@ -1,4 +1,0 @@
-allow macloader init:unix_stream_socket connectto;
-
-# vendor.wifi.dualconcurrent.interface
-dontaudit macloader property_socket:sock_file write;
