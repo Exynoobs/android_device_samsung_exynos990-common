@@ -80,6 +80,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor:32 \
+    android.hardware.drm@1.4.vendor:32 \
     android.hardware.drm@1.4-service.clearkey
 
 # fastbootd
@@ -148,6 +149,10 @@ PRODUCT_PACKAGES += \
 # Livedisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-exynos
+
+# OMX
+PRODUCT_PACKAGES += \
+    libepicoperator
 
 # Media
 PRODUCT_COPY_FILES += \
