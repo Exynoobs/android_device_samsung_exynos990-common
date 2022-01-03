@@ -31,4 +31,5 @@ genfscon sysfs /devices/virtual/input/input7/enable                             
 genfscon sysfs /devices/virtual/input/input7/poll_delay                                         u:object_r:sysfs_input_writable:s0
 genfscon sysfs /devices/virtual/sec/hall_ic/certify_hall_detect                                 u:object_r:sysfs_sec_key:s0
 genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                                         u:object_r:sysfs_sec_key:s0
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                                  u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                         u:object_r:sysfs_sensorhub_writable:s0
