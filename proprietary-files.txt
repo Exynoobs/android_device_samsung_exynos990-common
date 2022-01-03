@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version XXSCDUJ5, unless pinned
+# Proprietary files - from Samsung package version XXSCEUL7, unless pinned
 
 ## Audio
 vendor/etc/a2dp_audio_policy_configuration.xml
@@ -36,7 +36,6 @@ vendor/lib/libfloatingfeature.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libaudiosaplus_sec.so
-vendor/lib/soundfx/libgearvr.so
 vendor/lib/soundfx/libmysound.so
 vendor/lib/soundfx/libmyspace.so
 vendor/lib/soundfx/libplaybackrecorder.so
@@ -49,7 +48,6 @@ vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
-vendor/lib64/soundfx/libgearvr.so
 vendor/lib64/soundfx/libmysound.so
 vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libplaybackrecorder.so
@@ -72,7 +70,6 @@ system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 ## Camera
 -vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
 -vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-system/lib/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/lib/camera.device@1.0-impl.so
@@ -98,8 +95,8 @@ vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 
 ## Camera dependencies
 vendor/lib/libSEF.quram.so
-vendor/lib/libacryl.so
 vendor/lib/libacryl.plugin.hdr.exynos990.so
+vendor/lib/libacryl.so
 vendor/lib/libbayergdccore.so
 vendor/lib/libcsc.so
 vendor/lib/libexynoscamera_fakefusion.so
@@ -109,14 +106,16 @@ vendor/lib/libexynoscamera_plugin_utils.so
 vendor/lib/libgiantmscl.so
 vendor/lib/libhwjpeg.so
 vendor/lib/libhwjsqz.so
+vendor/lib/libmpbase.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libstagefrighthw.so
-vendor/lib/libtriplecam_video_optical_zoom.so
+vendor/lib/libtriplecam_image_optical_zoom.so
 vendor/lib/libtriplecam_video_optical_zoom.so
 vendor/lib/libtriplecapture_interface.so
 vendor/lib/libuniapi.so
 vendor/lib/libuniplugin.so
 vendor/lib/libvpl.so
+vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libbayergdccore.so
 vendor/lib64/libcsc.so
@@ -127,19 +126,17 @@ vendor/lib64/libexynoscamera_plugin_utils.so
 vendor/lib64/libgiantmscl.so
 vendor/lib64/libhwjpeg.so
 vendor/lib64/libhwjsqz.so
+vendor/lib64/libmpbase.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libstagefrighthw.so
-vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libtriplecapture_interface.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libvpl.so
-vendor/lib64/libmpbase.so
-vendor/lib/libmpbase.so
-vendor/lib64/libtriplecam_image_optical_zoom.so
-vendor/lib/libtriplecam_image_optical_zoom.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 ## Camera IDDQ plugin
 vendor/lib/libIDDQD_core.so
@@ -190,21 +187,23 @@ vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
 vendor/etc/sensor/lhd.conf
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
 ## Graphics
 vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/vulkan.mali.so
 vendor/lib/libion_exynos.so
 vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/libion_exynos.so
 
 ## HWC
 vendor/lib/hw/hwcomposer.exynos990.so
 vendor/lib/libExynosHWCService.so
 vendor/lib/libGrallocMapperCamera.so
+vendor/lib/libepic_helper.so
 vendor/lib/libexynosdisplay.so
 vendor/lib/libexynosgraphicbuffer.so
 vendor/lib/libexynosgscaler.so
@@ -217,6 +216,7 @@ vendor/lib64/libExynosHWCService.so
 vendor/lib64/libGrallocMapperCamera.so
 vendor/lib64/libacryl.plugin.hdr.exynos990.so
 vendor/lib64/libacryl.so
+vendor/lib64/libepic_helper.so
 vendor/lib64/libexynosdisplay.so
 vendor/lib64/libexynosgraphicbuffer.so
 vendor/lib64/libexynosgscaler.so
@@ -241,7 +241,6 @@ system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 vendor/firmware/nfc/sec_s3nsen4_firmware.bin
 
 ## OMX
-vendor/lib/libepicoperator.so
 vendor/lib/libExynosOMX_Core.so
 vendor/lib/libExynosOMX_Resourcemanager.so
 vendor/lib/libstagefright_omx_vendor.so
@@ -258,7 +257,6 @@ vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
 vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
 vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib64/libepicoperator.so
 vendor/lib64/libExynosOMX_Core.so
 vendor/lib64/libExynosOMX_Resourcemanager.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
@@ -283,27 +281,24 @@ vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
-vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib/libaudio-ril.so
 vendor/lib/libmdf.so
-vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsec_semRil.so
 vendor/lib/libsecure_storage.so
 vendor/lib/libsecril-client.so
-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/libmdf.so
-vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
+vendor/lib64/libril_sem.so
 vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecure_storage.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
 ## SECNATIVE
 vendor/lib/libsecnativefeature.so
@@ -321,11 +316,12 @@ vendor/lib64/libuuid.so
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
 vendor/tee/00000000-0000-0000-0000-000000020081
-vendor/tee/00000000-0000-0000-0000-000046495645
+vendor/tee/00000000-0000-0000-0000-000048444350
 vendor/tee/00000000-0000-0000-0000-0050524f4341
 vendor/tee/00000000-0000-0000-0000-00535453540c
 vendor/tee/00000000-0000-0000-0000-00575644524d
 vendor/tee/00000000-0000-0000-0000-446e6c6f6164
+vendor/tee/00000000-0000-0000-0000-53454d655345
 vendor/tee/00000000-0000-0000-0000-5354494d4552
 vendor/tee/00000000-0000-0000-0000-564c544b5052
 vendor/tee/00000000-0000-0000-0000-64756c444152
