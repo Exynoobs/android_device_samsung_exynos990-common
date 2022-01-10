@@ -8,6 +8,7 @@ vndbinder_use(hal_vendor_eden_runtime_default)
 
 r_dir_file(hal_vendor_eden_runtime_default, npu_vendor_data_file);
 r_dir_file(hal_vendor_eden_runtime_default, eden_gpu_vendor_data_file);
+r_dir_file(hal_vendor_eden_runtime_default, sysfs_gpu);
 
 allow hal_vendor_eden_runtime_default ion_device:chr_file rw_file_perms;
 allow hal_vendor_eden_runtime_default gpu_device:chr_file rw_file_perms;
@@ -16,10 +17,9 @@ allow hal_vendor_eden_runtime_default sysfs_npu_version:file r_file_perms;
 
 allow hal_vendor_eden_runtime_default npu_vendor_data_file:dir r_dir_perms;
 allow hal_vendor_eden_runtime_default npu_vendor_data_file:file r_file_perms;
-
+allow hal_vendor_eden_runtime_default system_data_file:dir search;
 allow hal_vendor_eden_runtime_default eden_gpu_vendor_data_file:dir rw_dir_perms;
 allow hal_vendor_eden_runtime_default eden_gpu_vendor_data_file:file rw_file_perms;
-
 allow hal_vendor_eden_runtime_default debugfs_tracing:file { read open };
 
 allow hal_vendor_eden_runtime_default traced_producer_socket:sock_file write;
