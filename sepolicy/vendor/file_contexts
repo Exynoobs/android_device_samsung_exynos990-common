@@ -53,6 +53,9 @@
 /dev/qbt2000_fd     u:object_r:fp_sensor_device:s0
 /dev/qbt2000_ipc    u:object_r:fp_sensor_device:s0
 
+# GPU
+/sys/kernel/gpu/gpu_freq_table    u:object_r:sysfs_gpu:s0
+
 # Battery
 /sys/devices/platform/105b0000.hsi2c/i2c-5(/.*)                           u:object_r:sysfs_battery:s0
 /sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)         u:object_r:sysfs_battery:s0

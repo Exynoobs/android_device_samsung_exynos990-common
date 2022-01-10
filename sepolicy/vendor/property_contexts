@@ -3,4 +3,4 @@ vendor.bluetooth_fw_ver        u:object_r:wifi_log_prop:s0
 vendor.nfc.fw.                 u:object_r:vendor_nfc_prop:s0
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 vendor.seHal.init              u:object_r:vendor_sehal_init_prop:s0
-vendor.hwc.vsync_mode          u:object_r:vendor_hwc_prop:s0
+vendor.hwc.exynos.vsync_mode   u:object_r:vendor_hwc_prop:s0
