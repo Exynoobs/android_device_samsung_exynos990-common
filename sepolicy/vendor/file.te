@@ -12,6 +12,7 @@ type debugfs_ion, fs_type, debugfs_type;
 type debugfs_ion_dma, fs_type, debugfs_type;
 type debugfs_mali, fs_type, debugfs_type;
 type debugfs_mali_mem, fs_type, debugfs_type;
+type debugfs_gpu_memory, fs_type, debugfs_type;
 
 # efs types
 type cpdebug_efs_file, fs_type;
@@ -32,3 +33,4 @@ type sysfs_input_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mem_boost_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_npu_version, sysfs_type, r_fs_type, fs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+type sysfs_gpu, sysfs_type, r_fs_type, fs_type;
