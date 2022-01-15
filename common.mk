@@ -152,7 +152,7 @@ PRODUCT_PACKAGES += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
+    vendor.lineage.livedisplay@2.0-service.exynos990
 
 # OMX
 PRODUCT_PACKAGES += \
