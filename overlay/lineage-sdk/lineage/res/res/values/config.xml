@@ -31,4 +31,8 @@
 
     <!-- Default values for LiveDisplay -->
     <integer name="config_defaultLiveDisplayMode">1</integer>
+
+    <!-- Ambient lux at which to enable outdoor mode when LiveDisplay is enabled -->
+    <integer name="config_outdoorAmbientLux">10000</integer>
+    <integer name="config_outdoorAmbientLuxHysteresis">1000</integer>
 </resources>
