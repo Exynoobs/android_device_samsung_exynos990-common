@@ -30,5 +30,5 @@
     <bool name="config_haveNotch">true</bool>
 
     <!-- Default values for LiveDisplay -->
-    <integer name="config_defaultLiveDisplayMode">0</integer>
+    <integer name="config_defaultLiveDisplayMode">1</integer>
 </resources>
