@@ -11,6 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
     <!-- All the capabilities of the LEDs on this device, stored as a bit field. -->
     <integer name="config_deviceLightCapabilities">0</integer>
@@ -28,9 +29,6 @@
 
     <!-- Whether device has a notch -->
     <bool name="config_haveNotch">true</bool>
-
-    <!-- Default values for LiveDisplay -->
-    <integer name="config_defaultLiveDisplayMode">0</integer>
 
     <!-- Ambient lux at which to enable outdoor mode when LiveDisplay is enabled -->
     <integer name="config_outdoorAmbientLux">10000</integer>

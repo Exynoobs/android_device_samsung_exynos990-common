@@ -14,8 +14,8 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<!-- These resources are around just to allow their values to be customized -->
+
 <resources>
-    <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
+     <!-- Threshold in micro watts above which a charger is rated as "fast"; 10.8W  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>
