@@ -19,15 +19,6 @@
             "HoldFd": true
         },
         {
-            "Name": "TouchscreenEnable",
-            "Path": "/sys/class/sec/tsp/input/enabled",
-            "Values": [
-                "1",
-                "0"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
             "Values": [
@@ -151,12 +142,6 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
-        },
-        {
-            "PowerHint": "INTERACTIVE",
-            "Node": "TouchscreenEnable",
-            "Duration": 0,
-            "Value": "1"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
