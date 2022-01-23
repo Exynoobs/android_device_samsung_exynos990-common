@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/* //device/apps/common/assets/res/any/dimens.xml
-**
-** Copyright 2006, The Android Open Source Project
+/*
+** Copyright 2020, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,13 +16,8 @@
 ** limitations under the License.
 */
 -->
-<resources>
-    <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">150px</dimen>
 
-    <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
-    <dimen name="rounded_corner_radius_adjustment">5px</dimen>
-
-    <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">28.0dp</dimen>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Use legacy wifi p2p dedicated address instead of randomize address. -->
+    <bool name="config_tether_enable_legacy_wifi_p2p_dedicated_ip">true</bool>
 </resources>
