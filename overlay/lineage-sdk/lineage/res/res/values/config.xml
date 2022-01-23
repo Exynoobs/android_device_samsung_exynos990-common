@@ -11,6 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
     <!-- All the capabilities of the LEDs on this device, stored as a bit field. -->
     <integer name="config_deviceLightCapabilities">0</integer>
