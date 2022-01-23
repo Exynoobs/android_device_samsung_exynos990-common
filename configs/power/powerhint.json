@@ -28,15 +28,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "LCDEnable",
-            "Path": "/sys/class/power_supply/battery/lcd",
-            "Values": [
-                "1",
-                "0"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
             "Values": [
@@ -164,12 +155,6 @@
         {
             "PowerHint": "INTERACTIVE",
             "Node": "TouchscreenEnable",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "INTERACTIVE",
-            "Node": "LCDEnable",
             "Duration": 0,
             "Value": "1"
         },
