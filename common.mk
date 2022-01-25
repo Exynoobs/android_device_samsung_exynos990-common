@@ -277,6 +277,11 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0.vendor:64 \
     android.hardware.sensors@2.1-service.samsung-multihal
 
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0-impl-gto:64 \
+    android.hardware.secure_element@1.0-service-gto
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sensorndkbridge
