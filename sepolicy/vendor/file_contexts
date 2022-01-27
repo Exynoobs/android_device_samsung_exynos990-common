@@ -56,6 +56,9 @@
 # GPU
 /sys/kernel/gpu/gpu_freq_table    u:object_r:sysfs_gpu:s0
 
+# App launch
+/sys/kernel/mm/vmscan/am_app_launch     u:object_r:sysfs_app_launch_writable:s0
+
 # Battery
 /sys/devices/platform/105b0000.hsi2c/i2c-5(/.*)                           u:object_r:sysfs_battery:s0
 /sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)         u:object_r:sysfs_battery:s0
@@ -69,8 +72,17 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
 
+# F2FS
+/sys/fs/f2fs/dm-5/gc_urgent                          u:object_r:sysfs_f2fs_writable:s0
+
 # Mem boost
 /sys/kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0
+
+# MIF
+/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min     u:object_r:sysfs_mif_writable:s0
+
+# INT
+/sys/class/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
 
 # MDNIE
 /sys/devices/platform/panel_drv@0/lcd/panel/mdnie(/.*)    u:object_r:sysfs_lcd_writable:s0
