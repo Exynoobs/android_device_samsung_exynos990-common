@@ -69,8 +69,17 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
 
+# F2FS
+/sys/fs/f2fs/dm-5/gc_urgent                          u:object_r:sysfs_f2fs_writable:s0
+
 # Mem boost
 /sys/kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0
+
+# MIF
+/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min     u:object_r:sysfs_mif_writable:s0
+
+# INT
+/sys/class/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
 
 # MDNIE
 /sys/devices/platform/panel_drv@0/lcd/panel/mdnie(/.*)    u:object_r:sysfs_lcd_writable:s0
