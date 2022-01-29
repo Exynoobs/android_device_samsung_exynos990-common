@@ -118,15 +118,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "GPUPowerPolicy",
-            "Path": "/sys/devices/platform/18500000.mali/power_policy",
-            "Values": [
-                "always_on",
-                "coarse_demand"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
@@ -150,15 +141,6 @@
             "Values": [
               "0",
               "1"
-            ],
-            "ResetOnInit": true
-        },
-        {
-            "Name": "F2fsRecessModeEnable",
-            "Path": "/sys/fs/f2fs/sda32/gc_urgent",
-            "Values": [
-              "2",
-              "0"
             ],
             "ResetOnInit": true
         },
@@ -282,12 +264,6 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "GPUPowerPolicy",
-            "Duration": 5000,
-            "Value": "always_on"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "UfsClkGateEnable",
             "Duration": 5000,
             "Value": "0"
@@ -297,12 +273,6 @@
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
             "Value": "0x0000003d"
-        },
-        {
-            "PowerHint": "DISPLAY_INACTIVE",
-            "Node": "F2fsRecessModeEnable",
-            "Duration": 0,
-            "Value": "2"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
