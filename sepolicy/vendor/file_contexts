@@ -69,9 +69,6 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
 
-# F2FS
-/sys/fs/f2fs/dm-5/gc_urgent                          u:object_r:sysfs_f2fs_writable:s0
-
 # Mem boost
 /sys/kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0
 

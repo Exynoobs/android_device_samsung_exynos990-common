@@ -1,147 +1,93 @@
 {
     "Nodes": [
         {
-            "Name": "MemFreq",
+            "Name": "MIFMinFreq",
             "Path": "/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
             "Values": [
               "2730000",
-              "1014000",
+              "1352000",
               "421000"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "CPULittleClusterMaxFreq",
-            "Path": "/dev/cluster0_freq_max",
+            "Name": "CPUMaxFreq",
+            "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
-                "0x001e8c50",
-                "0x00183350",
-                "0x00163780",
-                "0x0013d620"
+                "2730000",
+                "1895537",
+                "1583613",
+                "-1"
             ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
-            "Name": "CPULittleClusterMinFreq",
-            "Path": "/dev/cluster0_freq_min",
+            "Name": "CPUMinFreq",
+            "Path": "/sys/power/cpufreq_min_limit",
             "Values": [
-                "0x001e8c50",
-                "0x00183350",
-                "0x0013d620",
-                "0x0011a788",
-                "0x000c4c70",
-                "0x00000000"
+                "2623359",
+                "1930195",
+                "1167714",
+                "68250",
+                "-1"
             ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUMidClusterMaxFreq",
-            "Path": "/dev/cluster1_freq_max",
-            "Values": [
-                "0x00263540",
-                "0x001cf610",
-                "0x00183350",
-                "0x00156c60",
-                "0x0012a570"
-            ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUMidClusterMinFreq",
-            "Path": "/dev/cluster1_freq_min",
-            "Values": [
-                "0x00263540",
-                "0x00183350",
-                "0x00156c60",
-                "0x0012a570",
-                "0x000ce4c8",
-                "0x00000000"
-            ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUBigClusterMaxFreq",
-            "Path": "/dev/cluster2_freq_max",
-            "Values": [
-                "0x0029a810",
-                "0x00234f10",
-                "0x001cf610",
-                "0x001506d0"
-            ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUBigClusterMinFreq",
-            "Path": "/dev/cluster2_freq_min",
-            "Values": [
-                "0x0029a810",
-                "0x001cf610",
-                "0x0017cdc0",
-                "0x001506d0",
-                "0x00137090",
-                "0x000d1790",
-                "0x00000000"
-            ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMinFreq",
-            "Path": "/dev/gpu_freq_min",
-            "Values": [
-                "0x0008ba60",
-                "0x0005c0a8",
-                "0x00026160"
-            ],
-            "HoldFd": true,
             "ResetOnInit": true
         },
         {
             "Name": "GPUMaxFreq",
-            "Path": "/dev/gpu_freq_max",
+            "Path": "/sys/kernel/gpu/gpu_max_clock",
             "Values": [
-                "0x000c3500",
-                "0x00069b68",
-                "0x0008ba60",
-                "0x000ab630"
+                "800000",
+                "455000"
             ],
-            "HoldFd": true,
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
-            "Name": "TASchedtuneBoost",
-            "Path": "/dev/stune/top-app/schedtune.boost",
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
-                "30",
-                "5"
+                "572000",
+                "377000",
+                "260000",
+                "156000"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "PMQoSCpuDmaLatency",
-            "Path": "/dev/cpu_dma_latency",
+            "Name": "LPMDisable",
+            "Path": "/sys/power/cstate_control",
             "Values": [
-                "0x0000003d",
-                "0x00000064"
+                "0",
+                "1"
             ],
-            "HoldFd": true
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         },
         {
-            "Name": "UfsClkGateEnable",
-            "Path": "/sys/devices/platform/13100000.ufs/clkgate_enable",
+            "Name": "KERNEL_APP_START_NOTIFY",
+            "Path": "/sys/kernel/mm/vmscan/am_app_launch",
             "Values": [
-              "0",
-              "1"
+                "0",
+                "1"
             ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "EMSTUNE_REQMODE",
+            "Path": "/sys/kernel/ems/emstune/req_mode",
+            "Values": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "DefaultIndex": 1,
             "ResetOnInit": true
         },
         {
@@ -192,141 +138,99 @@
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "CPUBigClusterMaxFreq",
+            "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
-            "Value": "0x001cf610"
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "CPUMidClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x00183350"
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x0013d620"
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "0x00069b68"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUMidClusterMinFreq",
-            "Duration": 0,
-            "Value": "0x0012a570"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 0,
-            "Value": "0x0011a788"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "UfsClkGateEnable",
-            "Duration": 200,
             "Value": "0"
         },
         {
             "PowerHint": "INTERACTION",
-            "Node": "TASchedtuneBoost",
+            "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
-            "Value": "30"
+            "Value": "5"
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUMidClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x00263540"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x001e8c50"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "MemFreq",
+            "Node": "MIFMinFreq",
             "Duration": 5000,
             "Value": "2730000"
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "UfsClkGateEnable",
+            "Node": "CPUMaxFreq",
+            "Duration": 5000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 5000,
+            "Value": "2623359"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 5000,
+            "Value": "377000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "KERNEL_APP_START_NOTIFY",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "EMSTUNE_REQMODE",
             "Duration": 5000,
             "Value": "0"
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
-            "Duration": 5000,
-            "Value": "0x0000003d"
-        },
-        {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUMidClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x00263540"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x001e8c50"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "MemFreq",
+            "Node": "MIFMinFreq",
             "Duration": 1000,
             "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "UfsClkGateEnable",
+            "Node": "CPUMaxFreq",
             "Duration": 1000,
-            "Value": "0"
+            "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
+            "Node": "CPUMinFreq",
             "Duration": 1000,
-            "Value": "0x0000003d"
+            "Value": "2623359"
         },
         {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "CPUMidClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x001cf610"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x001cf610"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "MemFreq",
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "GPUMinFreq",
             "Duration": 1000,
-            "Value": "1014000"
+            "Value": "377000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "KERNEL_APP_START_NOTIFY",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "EMSTUNE_REQMODE",
+            "Duration": 1000,
+            "Value": "0"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -335,40 +239,52 @@
             "Value": "CAMERA_STREAMING_MID"
         },
         {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUBigClusterMinFreq",
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "MIFMinFreq",
             "Duration": 1000,
-            "Value": "0x0029a810"
+            "Value": "1352000"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "1895537"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "EMSTUNE_REQMODE",
+            "Duration": 0,
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUMidClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x00263540"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x001e8c50"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "MemFreq",
+            "Node": "MIFMinFreq",
             "Duration": 1000,
             "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_SHOT",
-            "Node": "PMQoSCpuDmaLatency",
+            "Node": "CPUMaxFreq",
             "Duration": 1000,
-            "Value": "0x0000003d"
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1930195"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "LPMDisable",
+            "Duration": 1000,
+            "Value": "1"
         },
         {
             "PowerHint": "AUDIO_LAUNCH",
-            "Node": "PMQoSCpuDmaLatency",
+            "Node": "CPUMinFreq",
             "Duration": 0,
-            "Value": "0x0000003d"
+            "Value": "68250"
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -378,9 +294,9 @@
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "PMQoSCpuDmaLatency",
+            "Node": "CPUMinFreq",
             "Duration": 0,
-            "Value": "0x0000003d"
+            "Value": "68250"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
@@ -390,15 +306,9 @@
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMinFreq",
+            "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
-            "Value": "0x0008ba60"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "0x000c3500"
+            "Value": "2"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
