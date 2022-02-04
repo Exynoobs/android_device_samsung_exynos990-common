@@ -1,16 +1,6 @@
 {
     "Nodes": [
         {
-            "Name": "MIFMinFreq",
-            "Path": "/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
-            "Values": [
-              "2730000",
-              "1352000",
-              "421000"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
@@ -30,27 +20,6 @@
                 "1167714",
                 "68250",
                 "-1"
-            ],
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMaxFreq",
-            "Path": "/sys/kernel/gpu/gpu_max_clock",
-            "Values": [
-                "800000",
-                "455000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMinFreq",
-            "Path": "/sys/kernel/gpu/gpu_min_clock",
-            "Values": [
-                "572000",
-                "377000",
-                "260000",
-                "156000"
             ],
             "ResetOnInit": true
         },
@@ -75,6 +44,15 @@
             "ResetOnInit": true
         },
         {
+            "Name": "GPUPowerPolicy",
+            "Path": "/sys/devices/platform/18500000.mali/power_policy",
+            "Values": [
+                "always_on",
+                "coarse_demand"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "EMSTUNE_REQMODE",
             "Path": "/sys/kernel/ems/emstune/req_mode",
             "Values": [
@@ -86,6 +64,16 @@
                 "5",
                 "6",
                 "7"
+            ],
+            "Comments": [
+                "0 => Normal Mode",
+                "1 => Power-Scenario Mode",
+                "2 => Performance Mode",
+                "3 => Light-Game Mode",
+                "4 => Light-Video Mode",
+                "5 => Balance Mode",
+                "6 => Pinned Mode",
+                "7 => Game-Mode"
             ],
             "DefaultIndex": 1,
             "ResetOnInit": true
@@ -150,12 +138,6 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "MIFMinFreq",
-            "Duration": 5000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "CPUMaxFreq",
             "Duration": 5000,
             "Value": "2730000"
@@ -168,15 +150,15 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "GPUMinFreq",
-            "Duration": 5000,
-            "Value": "377000"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "LPMDisable",
             "Duration": 5000,
             "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUPowerPolicy",
+            "Duration": 5000,
+            "Value": "always_on"
         },
         {
             "PowerHint": "LAUNCH",
@@ -192,12 +174,6 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "MIFMinFreq",
-            "Duration": 1000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUMaxFreq",
             "Duration": 1000,
             "Value": "2730000"
@@ -207,12 +183,6 @@
             "Node": "CPUMinFreq",
             "Duration": 1000,
             "Value": "2623359"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "GPUMinFreq",
-            "Duration": 1000,
-            "Value": "377000"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -240,27 +210,9 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "MIFMinFreq",
-            "Duration": 1000,
-            "Value": "1352000"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "CPUMaxFreq",
-            "Duration": 0,
-            "Value": "1895537"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "MIFMinFreq",
-            "Duration": 1000,
-            "Value": "2730000"
+            "Value": "0"
         },
         {
             "PowerHint": "CAMERA_SHOT",
