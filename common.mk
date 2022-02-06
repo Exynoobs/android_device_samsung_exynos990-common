@@ -274,6 +274,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor:64
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0.vendor:64 \
