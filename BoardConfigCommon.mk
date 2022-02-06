@@ -160,6 +160,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2022-01-01
 
 ## SELinux
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
