@@ -13,11 +13,14 @@ binder_call(hal_camera_default, system_server)
 binder_call(system_server, hal_camera_default)
 
 get_prop(hal_camera_default, exported_camera_prop);
+get_prop(hal_camera_default, exported_system_prop);
 
 r_dir_file(hal_camera_default, app_efs_file);
 r_dir_file(hal_camera_default, sysfs_battery);
 r_dir_file(hal_camera_default, sysfs_camera);
 r_dir_file(hal_camera_default, sysfs_sensors);
+
+wakelock_use(hal_camera_default)
 
 set_prop(hal_camera_default, vendor_camera_prop);
 vndbinder_use(hal_camera_default);
