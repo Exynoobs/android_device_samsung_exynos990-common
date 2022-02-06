@@ -1,7 +1,18 @@
+# Camera
+vendor_internal_prop(vendor_camera_prop)
+
+# HWC
+vendor_internal_prop(vendor_hwc_prop)
+
+# NFC
+vendor_internal_prop(vendor_nfc_prop)
+
+# seHal
+vendor_internal_prop(vendor_sehal_init_prop)
+
+# Samsung
 vendor_internal_prop(debug_level_prop)
 vendor_internal_prop(product_ship_prop)
-vendor_internal_prop(sf_hs_mode_prop)
-vendor_internal_prop(vendor_camera_prop)
-vendor_internal_prop(vendor_hwc_prop)
-vendor_internal_prop(vendor_nfc_prop)
-vendor_internal_prop(vendor_sehal_init_prop)
+
+# Wifi
+vendor_internal_prop(vendor_wifi_version_prop)

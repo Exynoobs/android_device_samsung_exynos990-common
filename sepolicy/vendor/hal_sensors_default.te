@@ -1,2 +1,6 @@
-allow hal_sensors_default sysfs:file { read open };
+# hal_sensors_default.te
+
+## FIXME ##
+allow hal_sensors_default sysfs:file r_file_perms;
+
 allow hal_sensors_default sysfs_input_writable:file rw_file_perms;
