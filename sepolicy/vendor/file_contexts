@@ -9,7 +9,7 @@
 ####################################
 # Data Files
 
-/data/vendor/eden/gpu(/.*)?    u:object_r:eden_gpu_vendor_data_file:s0
+/data/vendor/eden/gpu(/.*)?    u:object_r:data_eden_gpu_file:s0
 /data/vendor/mediadrm(/.*)?    u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/nfc(/.*)?         u:object_r:nfc_vendor_data_file:s0
 
@@ -89,7 +89,6 @@
 /efs/ssm(/.*)?             u:object_r:ssm_efs_file:s0
 /efs/usb_hw_param(/.*)?    u:object_r:sec_efs_file:s0
 
-/mnt/vendor/efs/taas(/.*)? u:object_r:taas_efs_file:s0
 /mnt/vendor/efs/wv\.keys   u:object_r:sec_efs_file:s0
 
 ####################################

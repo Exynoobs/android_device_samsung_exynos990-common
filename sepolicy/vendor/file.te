@@ -1,8 +1,8 @@
 # file.te
 
 # data types
+type data_eden_gpu_file, file_type, data_file_type;
 type display_vendor_data_file, file_type, data_file_type;
-type eden_gpu_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type npu_vendor_data_file, file_type, data_file_type;
@@ -22,7 +22,6 @@ type gatekeeper_efs_file, fs_type;
 type kpm_efs_file, fs_type;
 type pdp_efs_file, fs_type;
 type ssm_efs_file, fs_type;
-type taas_efs_file, fs_type;
 
 # sysfs types
 type sysfs_app_launch_writable, sysfs_type, rw_fs_type, fs_type;
