@@ -1,47 +1,100 @@
-## DebugFS
+####################################
+# DebugFS
+#
+
 genfscon debugfs /mali/                                    u:object_r:debugfs_mali:s0
 genfscon debugfs /mali/mem/                                u:object_r:debugfs_mali_mem:s0
 genfscon debugfs /dma_buf                                  u:object_r:debugfs_ion_dma:s0
 genfscon debugfs /ion                                      u:object_r:debugfs_ion:s0
 genfscon debugfs /mali0/gpu_memory                         u:object_r:debugfs_gpu_memory:s0
 
-## Sysfs
-# devices
-genfscon sysfs /devices/platform/10730000.pinctrl/gpiochip51/gpio/gpio143/value                 u:object_r:sysfs_gps_writable:s0
-genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input1/enabled               u:object_r:sysfs_touchscreen_writable:s0
-genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input2/enabled               u:object_r:sysfs_touchscreen_writable:s0
-genfscon sysfs /devices/platform/10ab0000.displayport/extcon/extcon0/cable.0/state              u:object_r:sysfs_displayport_writable:s0
-genfscon sysfs /devices/platform/13100000.ufs/clkgate_enable                                    u:object_r:sysfs_ufs_writable:s0
-genfscon sysfs /devices/platform/15940000.speedy/i2c-16/16-0000/s2mps19-rtc/rtc/rtc0/hctosys    u:object_r:sysfs_rtc:s0
-genfscon sysfs /devices/platform/15c40000.adc/iio                                               u:object_r:sysfs_iio:s0
-genfscon sysfs /devices/platform/18500000.mali/power_policy                                     u:object_r:sysfs_mali_writable:s0
-genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video6/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video7/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/19050000.decon_f/hiber_exit                                    u:object_r:sysfs_decon:s0
-genfscon sysfs /devices/platform/19050000.decon_f/psr_info                                      u:object_r:sysfs_decon:s0
-genfscon sysfs /devices/platform/19050000.decon_f/vsync                                         u:object_r:sysfs_decon_writable:s0
-genfscon sysfs /devices/platform/19060000.decon_s/vsync                                         u:object_r:sysfs_decon:s0
-genfscon sysfs /devices/platform/19070000.decon_t/vsync                                         u:object_r:sysfs_decon:s0
-genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                                 u:object_r:sysfs_bt_writable:s0
-genfscon sysfs /devices/platform/npu_exynos/version                                             u:object_r:sysfs_npu_version:s0
-genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/brightness                         u:object_r:sysfs_backlight_writable:s0
-genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/max_brightness                     u:object_r:sysfs_backlight_writable:s0
-genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/SVC_OCTA                                 u:object_r:sysfs_lcd_writable:s0
-genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/lcd_type                                 u:object_r:sysfs_lcd_writable:s0
-genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/window_type                              u:object_r:sysfs_lcd_writable:s0
-genfscon sysfs /devices/system/chip-id/revision                                                 u:object_r:sysfs_chipid:s0
-genfscon sysfs /devices/virtual/input/input7/enable                                             u:object_r:sysfs_input_writable:s0
-genfscon sysfs /devices/virtual/input/input7/poll_delay                                         u:object_r:sysfs_input_writable:s0
-genfscon sysfs /devices/virtual/sec/hall_ic/certify_hall_detect                                 u:object_r:sysfs_sec_key:s0
-genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                                         u:object_r:sysfs_sec_key:s0
-genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                                  u:object_r:sysfs_sensors_writable:s0
-genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                         u:object_r:sysfs_sensorhub_writable:s0
+####################################
+# Sysfs
+#
 
-# Kernel
-genfscon sysfs /kernel/gpu/gpu_max_clock                 u:object_r:sysfs_gpu_writable:s0
-genfscon sysfs /kernel/gpu/gpu_min_clock                 u:object_r:sysfs_gpu_writable:s0
-genfscon sysfs /kernel/mm/vmscan/am_app_launch           u:object_r:sysfs_app_launch_writable:s0
+# Backlight
+genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/brightness              u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/max_brightness          u:object_r:sysfs_backlight_writable:s0
+
+# Battery
+genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_en               u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_stop_capacity    u:object_r:sysfs_battery_writable:s0
+
+# Bluetooth
+genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                      u:object_r:sysfs_bt_writable:s0
+
+# Chip-id
+genfscon sysfs /devices/system/chip-id/revision                  u:object_r:sysfs_chipid:s0
+
+# Decon
+genfscon sysfs /devices/platform/19050000.decon_f/hiber_exit     u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19050000.decon_f/psr_info       u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19050000.decon_f/vsync          u:object_r:sysfs_decon_writable:s0
+genfscon sysfs /devices/platform/19060000.decon_s/vsync          u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19070000.decon_t/vsync          u:object_r:sysfs_decon:s0
+
+# Display
+genfscon sysfs /devices/platform/10ab0000.displayport/extcon/extcon0/cable.0/state   u:object_r:sysfs_displayport_writable:s0
+
+# Ems
 genfscon sysfs /kernel/ems/emstune/req_mode              u:object_r:sysfs_ems_writable:s0
 
+# GPS
+genfscon sysfs /devices/platform/10730000.pinctrl/gpiochip51/gpio/gpio143/value      u:object_r:sysfs_gps_writable:s0
+
+# GPU
+genfscon sysfs /kernel/gpu/gpu_freq_table                u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_max_clock                 u:object_r:sysfs_gpu_writable:s0
+genfscon sysfs /kernel/gpu/gpu_memory                    u:object_r:sysfs_gpu_memory:s0
+genfscon sysfs /kernel/gpu/gpu_min_clock                 u:object_r:sysfs_gpu_writable:s0
+
+# IIO
+genfscon sysfs /devices/platform/15c40000.adc/iio        u:object_r:sysfs_iio:s0
+
+# Input
+genfscon sysfs /devices/virtual/input/input7/enable      u:object_r:sysfs_input_writable:s0
+genfscon sysfs /devices/virtual/input/input7/poll_delay  u:object_r:sysfs_input_writable:s0
+
+# INT
+genfscon sysfs /class/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
+
+# LCD
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/SVC_OCTA       u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/lcd_type       u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/window_type    u:object_r:sysfs_lcd_writable:s0
+
+# Mali
+genfscon sysfs /devices/platform/18500000.mali/power_policy           u:object_r:sysfs_mali_writable:s0
+
+# MIF
+genfscon sysfs /class/devfreq/17000010.devfreq_mif/scaling_devfreq_min   u:object_r:sysfs_mif_writable:s0
+
+# NPU
+genfscon sysfs /devices/platform/npu_exynos/version                      u:object_r:sysfs_npu_version:s0
+
 # Power
-genfscon sysfs /power/cstate_control                     u:object_r:sysfs_power_writable:s0
+genfscon sysfs /power/cstate_control            u:object_r:sysfs_power_writable:s0
+
+# RTC
+genfscon sysfs /devices/platform/15940000.speedy/i2c-16/16-0000/s2mps19-rtc/rtc/rtc0/hctosys    u:object_r:sysfs_rtc:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                           u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                  u:object_r:sysfs_sensorhub_writable:s0
+genfscon sysfs /devices/virtual/sec/hall_ic/certify_hall_detect                          u:object_r:sysfs_sec_key:s0
+genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                                  u:object_r:sysfs_sec_key:s0
+
+# Touchscreen
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input1/enabled        u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input2/enabled        u:object_r:sysfs_touchscreen_writable:s0
+
+# Ufs
+genfscon sysfs /devices/platform/13100000.ufs/clkgate_enable                             u:object_r:sysfs_ufs_writable:s0
+
+# V4L
+genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video6/name                    u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video7/name                    u:object_r:sysfs_v4l:s0
+
+# Vmscan
+genfscon sysfs /kernel/mm/vmscan/am_app_launch     u:object_r:sysfs_app_launch_writable:s0
+genfscon sysfs /kernel/mm/vmscan/mem_boost_mode    u:object_r:sysfs_mem_boost_writable:s0

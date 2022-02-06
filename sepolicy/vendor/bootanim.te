@@ -1,2 +1,6 @@
+# bootanim.te
+
 allow bootanim traced:unix_stream_socket connectto;
-allow bootanim traced_producer_socket:sock_file write;
+allow bootanim traced_producer_socket:sock_file w_file_perms;
+
+dontaudit bootanim system_data_file:dir search;

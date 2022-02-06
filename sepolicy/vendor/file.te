@@ -1,7 +1,8 @@
-# ROOT
+# file.te
+
 # data types
+type data_eden_gpu_file, file_type, data_file_type;
 type display_vendor_data_file, file_type, data_file_type;
-type eden_gpu_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type npu_vendor_data_file, file_type, data_file_type;
@@ -32,7 +33,9 @@ type sysfs_decon_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_displayport_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_ems_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_gpu, sysfs_type, r_fs_type, fs_type;
+type sysfs_gpu_memory, sysfs_type, r_fs_type, fs_type;
 type sysfs_gpu_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_io_sched_tuneable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_input_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_int_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mem_boost_writable, sysfs_type, rw_fs_type, fs_type;
