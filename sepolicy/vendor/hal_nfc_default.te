@@ -1,4 +1,7 @@
+# hal_nfc_default.te
+
 allow hal_nfc_default nfc_vendor_data_file:dir create_dir_perms;
-allow hal_nfc_default nfc_vendor_data_file:dir create_file_perms;
-get_prop(hal_nfc_default, product_ship_prop);
-set_prop(hal_nfc_default, vendor_nfc_prop);
+
+get_prop(hal_camera_default, exported_system_prop)
+get_prop(hal_nfc_default, product_ship_prop)
+set_prop(hal_nfc_default, vendor_nfc_prop)
