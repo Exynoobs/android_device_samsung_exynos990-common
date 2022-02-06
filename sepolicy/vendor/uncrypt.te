@@ -1,2 +1,4 @@
+# uncrypt.te
+
 allow uncrypt self:capability fowner;
 allow uncrypt self:capability sys_admin;

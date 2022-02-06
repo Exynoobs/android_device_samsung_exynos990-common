@@ -1,6 +1,17 @@
-allow rild hal_camera_default:dir search;
-allow rild hal_camera_default:file { read open getattr };
-allow rild hal_secure_element_default:dir search;
-allow rild hal_secure_element_default:file r_file_perms;
-allow rild product_ship_prop:file { read open };
+# rild.te
+
+allow rild {
+    hal_camera_default
+    hal_secure_element_default
+}:dir search;
+
+allow rild {
+    hal_camera_default
+    hal_secure_element_default
+}:file r_file_perms;
+
 get_prop(rild, product_ship_prop)
+set_prop(rild, vendor_radio_prop)
+set_prop(rild, radio_prop)
+
+dontaudit rild system_prop:file read;

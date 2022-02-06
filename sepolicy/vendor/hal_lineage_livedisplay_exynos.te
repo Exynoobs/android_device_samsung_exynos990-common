@@ -1,3 +1,5 @@
+# hal_lineage_livedisplay_exynos.te
+
 allow hal_lineage_livedisplay_exynos display_vendor_data_file:dir r_dir_perms;
 allow hal_lineage_livedisplay_exynos display_vendor_data_file:file r_file_perms;
 
