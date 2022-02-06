@@ -1,7 +1,28 @@
 r_dir_file(hal_power_default, sysfs_battery);
-allow hal_power_default sysfs_battery_writable:dir r_dir_perms;
-allow hal_power_default sysfs_battery_writable:file rw_file_perms;
 
-allow hal_power_default sysfs_decon:dir r_dir_perms;
+allow hal_power_default {
+    sysfs_app_launch_writable
+    sysfs_battery_writable
+    sysfs_decon
+    sysfs_gpu_writable
+    sysfs_int_writable
+    sysfs_mali_writable
+    sysfs_mif_writable
+    sysfs_power_writable
+    sysfs_ufs_writable
+}:dir r_dir_perms;
 
+allow hal_power_default {
+    sysfs_app_launch_writable
+    sysfs_battery_writable
+    sysfs_ems_writable
+    sysfs_gpu_writable
+    sysfs_int_writable
+    sysfs_mali_writable
+    sysfs_mif_writable
+    sysfs_power_writable
+    sysfs_ufs_writable
+}:file rw_file_perms;
+
+## FIXME ##
 allow hal_power_default sysfs:file write;

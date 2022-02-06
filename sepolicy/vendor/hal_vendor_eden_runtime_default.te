@@ -1,27 +1,47 @@
+# hal_vendor_eden_runtime_default.te
+
 type hal_vendor_eden_runtime_default, domain;
-hal_server_domain(hal_vendor_eden_runtime_default, hal_neuralnetworks)
-add_hwservice(hal_vendor_eden_runtime_default, hal_vendor_eden_runtime_hwservice)
 type hal_vendor_eden_runtime_default_exec, exec_type, vendor_file_type, file_type;
+
 init_daemon_domain(hal_vendor_eden_runtime_default)
 
-vndbinder_use(hal_vendor_eden_runtime_default)
+hal_server_domain(hal_vendor_eden_runtime_default, hal_neuralnetworks)
 
-r_dir_file(hal_vendor_eden_runtime_default, npu_vendor_data_file);
-r_dir_file(hal_vendor_eden_runtime_default, eden_gpu_vendor_data_file);
-r_dir_file(hal_vendor_eden_runtime_default, sysfs_gpu);
+add_hwservice(hal_vendor_eden_runtime_default, hal_vendor_eden_runtime_hwservice)
 
-allow hal_vendor_eden_runtime_default ion_device:chr_file rw_file_perms;
-allow hal_vendor_eden_runtime_default gpu_device:chr_file rw_file_perms;
+allow hal_vendor_eden_runtime_default {
+    gpu_device
+    ion_device
+}:chr_file rw_file_perms;
+
+allow hal_vendor_eden_runtime_default debugfs_tracing:file r_file_perms;
+
+allow hal_vendor_eden_runtime_default {
+    data_eden_gpu_file
+    npu_vendor_data_file
+    vendor_eden_gpu_vendor_file
+}:dir r_dir_perms;
+
+allow hal_vendor_eden_runtime_default {
+    data_eden_gpu_file
+    npu_vendor_data_file
+}:file r_file_perms;
+
+allow hal_vendor_eden_runtime_default data_eden_gpu_file:dir rw_dir_perms;
+allow hal_vendor_eden_runtime_default data_eden_gpu_file:file rw_file_perms;
+
+allow hal_vendor_eden_runtime_default sysfs_gpu:dir r_dir_perms;
+
+allow hal_vendor_eden_runtime_default {
+    sysfs_gpu
+    sysfs_npu_version
+}:file r_file_perms;
+
 allow hal_vendor_eden_runtime_default sysfs_devices_system_cpu:file rw_file_perms;
-allow hal_vendor_eden_runtime_default sysfs_npu_version:file r_file_perms;
-
-allow hal_vendor_eden_runtime_default npu_vendor_data_file:dir r_dir_perms;
-allow hal_vendor_eden_runtime_default npu_vendor_data_file:file r_file_perms;
-allow hal_vendor_eden_runtime_default system_data_file:dir search;
-allow hal_vendor_eden_runtime_default eden_gpu_vendor_data_file:dir rw_dir_perms;
-allow hal_vendor_eden_runtime_default eden_gpu_vendor_data_file:file rw_file_perms;
-allow hal_vendor_eden_runtime_default debugfs_tracing:file { read open };
 
 allow hal_vendor_eden_runtime_default traced_producer_socket:sock_file write;
 
+vndbinder_use(hal_vendor_eden_runtime_default)
+
+dontaudit hal_vendor_eden_runtime_default system_data_file:dir search;
 dontaudit hal_vendor_eden_runtime_default traced:unix_stream_socket connectto;
