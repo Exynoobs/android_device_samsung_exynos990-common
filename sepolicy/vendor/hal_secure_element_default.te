@@ -10,4 +10,6 @@ allow hal_secure_element_default system_suspend_hwservice:hwservice_manager find
 
 allow hal_secure_element_default property_socket:sock_file write;
 
+wakelock_use(hal_secure_element_default)
+
 set_prop(hal_secure_element_default, vendor_sehal_init_prop)
