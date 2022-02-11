@@ -1,0 +1,15 @@
+
+# for H/W Codec
+getdents64: 1
+
+# for Epic
+sendto: 1
+
+# used in frc library
+sched_setaffinity: 1
+sched_getaffinity: 1
+
+# to use property in mediacodec
+recvfrom: 1
+
+eventfd2: 1
