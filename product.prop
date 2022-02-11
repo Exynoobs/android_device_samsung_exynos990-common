@@ -1,2 +1,5 @@
 # Charger
 ro.charger.enable_suspend=true
+
+# LMKD
+ro.lmk.log_stats = true

@@ -118,6 +118,9 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos990
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# LMKD
+TARGET_LMKD_STATS_LOG := true
+
 ## Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
