@@ -25,4 +25,4 @@ odm        /odm            ext4    ro,errors=panic         wait,logical,first_st
 /devices/platform/10e00000.usb*                auto    auto    default    voldmanaged=usb:auto
 
 # ZRAM
-/dev/block/zram0 none swap defaults zramsize=2684354560,max_comp_streams=8
+/dev/block/zram0               none            swap    defaults zramsize=3221225472,max_comp_streams=8
