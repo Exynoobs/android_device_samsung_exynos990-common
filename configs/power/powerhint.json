@@ -79,6 +79,15 @@
             "ResetOnInit": true
         },
         {
+            "Name": "CDCpuset",
+            "Path": "/dev/cpuset/background/cpus",
+            "Values": [
+                "0-3",
+                "0-2"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
             "Values": [
@@ -213,6 +222,12 @@
             "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
             "Value": "0"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "0-3"
         },
         {
             "PowerHint": "CAMERA_SHOT",
