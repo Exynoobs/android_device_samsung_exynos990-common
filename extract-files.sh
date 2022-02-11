@@ -69,9 +69,6 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
-        vendor/lib*/libexynosdisplay.so)
-            sed -i "s/hwc\.exynos\.vsync_mode/vendor.hwc.vsync_mode/g" "${2}"
-            ;;
     esac
 }
 
