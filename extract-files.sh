@@ -63,6 +63,9 @@ function blob_fixup() {
         vendor/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
             ;;
+        vendor/etc/init/init.gps.rc)
+            sed -i '48,62d' "${2}"
+            ;;
         vendor/etc/init/wifi.rc)
             sed -i '48,71d' "${2}"
             ;;
