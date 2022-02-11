@@ -237,13 +237,22 @@
 # Vision (VPU, SCORE)
 /dev/vertex0             0660   cameraserver   camera
 /dev/vertex1             0660   media      media
-/dev/dsp                 0664   cameraserver   camera
+/dev/dsp                 0660   cameraserver   camera
 
 # NPU
 /dev/vertex10            0660   system      system
 
 #SCSC Bluetooth
 /dev/scsc_h4_0           0660   bluetooth  bluetooth
+
+# SCSC WLAN
+/dev/mx_0_r4_gdb          0660   system     system
+/dev/mx_0_m4_gdb          0660   system     system
+/dev/mx_0_mmap            0660   system     system
+/dev/mx_client_test_0     0660   system     system
+/dev/mx_0_debug_sampler   0660   system     system
+/dev/mx140_usb_clk_test_0 0660   system     system
+/dev/scsc_log_collector_0 0660   system     system
 
 #grip sensor
 /dev/input/event*				0660	system	input
