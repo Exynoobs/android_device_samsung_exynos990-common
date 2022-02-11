@@ -60,8 +60,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-            vendor/etc/libnfc-nci.conf)
+        vendor/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
+            ;;
+        vendor/etc/init/wifi.rc)
+            sed -i '48,71d' "${2}"
             ;;
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
