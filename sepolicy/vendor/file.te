@@ -23,6 +23,10 @@ type kpm_efs_file, fs_type;
 type pdp_efs_file, fs_type;
 type ssm_efs_file, fs_type;
 
+# proc types
+type proc_dirty_background_bytes, fs_type, proc_type;
+type proc_dirty_bytes, fs_type, proc_type;
+
 # sysfs types
 type sysfs_app_launch_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_camera, sysfs_type, r_fs_type, fs_type;
