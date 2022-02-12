@@ -2,6 +2,8 @@
 
 allow init kernel:system module_request;
 
+allow init ram_device:blk_file write;
+
 allow init tmpfs:lnk_file create;
 
 allow init efs_file:dir mounton;
