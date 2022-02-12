@@ -4,7 +4,6 @@
 type blcmd_block_device, dev_type;
 type boota_block_device, dev_type;
 type cpdebug_block_device, dev_type;
-type cpefs_block_device, dev_type;
 type harx_block_device, dev_type;
 type keystorage_block_device, dev_type;
 type nad_refer_block_device, dev_type;
