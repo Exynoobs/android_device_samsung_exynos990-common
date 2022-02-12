@@ -1,10 +1,19 @@
 # vendor_init.te
 
+allow vendor_init ram_device:blk_file setattr;
+
+allow vendor_init cpdebug_efs_file:lnk_file setattr;
+allow vendor_init gsi_metadata_file:dir search;
+
 allow vendor_init tmpfs:dir rw_dir_perms;
 allow vendor_init tmpfs:lnk_file create;
 
 allow vendor_init cgroup:file r_file_perms;
 
-allow vendor_init proc_dirty:file rw_file_perms;
+allow vendor_init {
+    proc_dirty
+    proc_dirty_background_bytes
+    proc_dirty_bytes
+}:file rw_file_perms;
 
-get_prop(vendor_init, vendor_radio_prop);
+get_prop(vendor_init, vendor_radio_prop)
