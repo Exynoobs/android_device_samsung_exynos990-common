@@ -66,6 +66,9 @@ function blob_fixup() {
         vendor/etc/init/init.gps.rc)
             sed -i '48,62d' "${2}"
             ;;
+        vendor/etc/init/init.vendor.rilcommon.rc)
+            sed -i '16,18d' "${2}"
+            ;;
         vendor/etc/init/wifi.rc)
             sed -i '48,71d' "${2}"
             ;;
