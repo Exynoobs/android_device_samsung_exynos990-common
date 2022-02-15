@@ -21,4 +21,6 @@ allow kernel {
     sysfs_sec_key
 }:file r_file_perms;
 
+allow kernel per_boot_file:file r_file_perms;
+
 allow kernel self:capability mknod;
