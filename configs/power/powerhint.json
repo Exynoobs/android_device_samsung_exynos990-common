@@ -221,7 +221,7 @@
             "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
-            "Value": "0"
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -249,9 +249,9 @@
         },
         {
             "PowerHint": "AUDIO_LAUNCH",
-            "Node": "CPUMinFreq",
+            "Node": "LPMDisable",
             "Duration": 0,
-            "Value": "68250"
+            "Value": "1"
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -261,9 +261,9 @@
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "CPUMinFreq",
+            "Node": "LPMDisable",
             "Duration": 0,
-            "Value": "68250"
+            "Value": "1"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
