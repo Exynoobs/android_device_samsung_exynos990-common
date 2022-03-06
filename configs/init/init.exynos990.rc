@@ -172,15 +172,6 @@ on init
     chown system system /dev/mode
     chmod 0664 /dev/mode
 
-    # FactoryApp(SensorHub)
-    chown system radio /efs/FactoryApp/version
-    chown system radio /efs/FactoryApp/predefine0
-    chown system radio /efs/FactoryApp/predefine1
-    chown system radio /efs/FactoryApp/predefine2
-    chown system system /efs/FactoryApp/baro_delta
-    chown root system /efs/FactoryApp/gyro_cal_data
-    chown root system /efs/FactoryApp/mag_cal_param
-
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration
@@ -762,6 +753,9 @@ on boot
     chown system system /efs/FactoryApp/baro_delta
     chown root system /efs/FactoryApp/gyro_cal_data
     chown root system /efs/FactoryApp/mag_cal_param
+    chmod 0664 /efs/FactoryApp/version
+    chmod 0664 /efs/FactoryApp/predefine0
+    chmod 0664 /efs/FactoryApp/predefine1
 
     # PMIC: S2MPS19 manual reset
     chown system system /sys/class/sec/ap_pmic/manual_reset
