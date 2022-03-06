@@ -24,3 +24,5 @@ allow kernel {
 allow kernel per_boot_file:file r_file_perms;
 
 allow kernel self:capability mknod;
+
+dontaudit kernel device:blk_file create;
