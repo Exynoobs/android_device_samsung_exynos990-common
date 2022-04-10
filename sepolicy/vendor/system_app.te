@@ -10,6 +10,11 @@ allow system_app {
     sysfs_zram
 }:dir search; 
 
+allow system_app {
+    proc_vmallocinfo
+    sysfs_zram
+}:file read; 
+
 allow system_app sysfs_lcd_writable:file rw_file_perms;
 allow system_app sysfs_lcd_writable:lnk_file rw_file_perms;
 
