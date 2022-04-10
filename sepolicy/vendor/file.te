@@ -2,7 +2,6 @@
 
 # data types
 type data_eden_gpu_file, file_type, data_file_type;
-type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type npu_vendor_data_file, file_type, data_file_type;
