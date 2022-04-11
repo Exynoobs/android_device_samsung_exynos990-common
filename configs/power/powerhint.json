@@ -98,6 +98,15 @@
             "ResetOnInit": false
         },
         {
+            "Name": "TouchscreenEnable",
+            "Path": "/sys/class/sec/tsp/input/enabled",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "PowerHALMainState",
             "Path": "vendor.powerhal.state",
             "Values": [
@@ -276,6 +285,12 @@
             "Node": "EMSTUNE_REQMODE",
             "Duration": 0,
             "Value": "2"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "TouchscreenEnable",
+            "Duration": 0,
+            "Value": "1"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
