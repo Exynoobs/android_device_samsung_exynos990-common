@@ -72,6 +72,10 @@ function blob_fixup() {
         vendor/etc/init/wifi.rc)
             sed -i '48,71d' "${2}"
             ;;
+        vendor/lib/hw/audio.primary.exynos990.so)
+            "${PATCHELF}" --add-needed libshim_audioparams.so "${2}"
+            sed -i 's/str_parms_get_str/str_parms_get_mod/g' "${2}"
+            ;;
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
