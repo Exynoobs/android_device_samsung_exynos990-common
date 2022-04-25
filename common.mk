@@ -56,6 +56,11 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+
+# BatteryLifeExtender
+PRODUCT_PACKAGES += \
+    vendor.lineage.batterylifeextender@1.0-service.samsung
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
