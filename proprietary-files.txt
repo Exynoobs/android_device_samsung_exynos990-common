@@ -68,7 +68,6 @@ vendor/firmware/txse3.bin
 vendor/firmware/volumemonitor.bin
 -vendor/lib/hw/audio.primary.exynos990.so
 -vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
--vendor/lib/hw/sound_trigger.primary.exynos990.so
 -vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 -vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 -vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos990
