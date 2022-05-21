@@ -47,9 +47,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a55
 BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-## Board
-TARGET_BOARD_INFO_FILE := $(COMMON_PATH)/board-info.txt
-
 ## Boot Image
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_CUSTOM_BOOTIMG := true
@@ -153,7 +150,6 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos990
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
 ## Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_exynos990
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 ## RIL
