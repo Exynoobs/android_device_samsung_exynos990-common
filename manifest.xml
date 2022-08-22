@@ -82,16 +82,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
-            <instance>sehhealth</instance>
-        </interface>
-    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
