@@ -2,3 +2,5 @@
 
 get_prop(lhd, debug_level_prop);
 get_prop(lhd, product_ship_prop);
+
+binder_call(lhd, servicemanager)

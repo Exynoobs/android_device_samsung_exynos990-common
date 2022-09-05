@@ -14,4 +14,5 @@ get_prop(rild, product_ship_prop)
 set_prop(rild, vendor_radio_prop)
 set_prop(rild, radio_prop)
 
+dontaudit rild default_prop:file read;
 dontaudit rild system_prop:file read;

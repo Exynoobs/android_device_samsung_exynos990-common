@@ -11,7 +11,7 @@ persist.sys.sf.hs_mode         u:object_r:exported_system_prop:s0
 ro.hardware.chipname           u:object_r:exported_default_prop:s0
 
 # HWC
-vendor.hwc.exynos.vsync_mode   u:object_r:vendor_hwc_prop:s0
+vendor.hwc.                    u:object_r:vendor_hwc_prop:s0
 
 # NFC
 ro.build.type                  u:object_r:exported_system_prop:s0

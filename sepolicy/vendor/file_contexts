@@ -109,16 +109,19 @@
 ####################################
 # Sysfs
 
-# Battery
-/sys/devices/platform/105b0000.hsi2c/i2c-5(/.*)                           u:object_r:sysfs_battery:s0
-/sys/devices/platform/105c0000.hsi2c/i2c-6(/.*)/power_supply(/.*)         u:object_r:sysfs_battery:s0
-/sys/devices/platform/sec-direct-charger/power_supply(/.*)                u:object_r:sysfs_battery:s0
+# Block
+/sys/devices/platform/(.*)/block/sda/queue/discard_max_bytes              u:object_r:sysfs_block_writable:s0
+/sys/devices/platform/(.*)/block/mmcblk0/mmcblk0p[0-9]+/start             u:object_r:sysfs_block:s0
 
 # Camera
 /sys/devices/virtual/camera/flash/rear_flash          u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/fw_update            u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/ssrm_camera_info     u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                      u:object_r:sysfs_camera:s0
+
+# Extcon
+/sys/devices/platform/(.*)/extcon/extcon0/cable.0/name        u:object_r:sysfs_extcon:s0
+/sys/devices/platform/(.*)/extcon/extcon0/cable.1/name        u:object_r:sysfs_extcon:s0
 
 # MDNIE
 /sys/devices/platform/panel_drv@0/lcd/panel/mdnie(/.*)    u:object_r:sysfs_lcd_writable:s0

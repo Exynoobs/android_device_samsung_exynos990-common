@@ -10,6 +10,8 @@ allow init efs_file:dir mounton;
 
 allow init mnt_vendor_file:dir mounton;
 
+allow init sysfs_block_writable:file rw_file_perms;
+
 allow init self:netlink_kobject_uevent_socket read;
 allow init tz_user_device:chr_file rw_file_perms;
 allow init proc_dirty:file {  write getattr };

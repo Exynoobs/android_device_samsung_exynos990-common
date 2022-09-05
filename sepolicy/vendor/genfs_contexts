@@ -24,8 +24,15 @@ genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/brightness         
 genfscon sysfs /devices/platform/panel_drv@0/backlight/panel/max_brightness          u:object_r:sysfs_backlight_writable:s0
 
 # Battery
-genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_en               u:object_r:sysfs_battery_writable:s0
-genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_stop_capacity    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_en                                                u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery/wc_tx_stop_capacity                                     u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                              u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/105c0000.hsi2c/i2c-6/6-0066/max77705-charger/power_supply/max77705-charger/type      u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/105b0000.hsi2c/i2c-5/5-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/105c0000.hsi2c/i2c-6/6-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type  u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/105c0000.hsi2c/i2c-6/6-0066/max77705-charger/power_supply/otg/type                   u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/105c0000.hsi2c/i2c-6/6-0057/power_supply/pca9468-charger/type                        u:object_r:sysfs_battery:s0
+
 
 # Bluetooth
 genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                      u:object_r:sysfs_bt_writable:s0
