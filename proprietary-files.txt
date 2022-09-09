@@ -321,10 +321,6 @@ vendor/etc/sensor/lhd.conf
 -vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
 vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
 
-# Memtrack
--vendor/lib64/hw/memtrack.exynos990.so
--vendor/lib/hw/memtrack.exynos990.so
-
 # Neural Networks
 -vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
