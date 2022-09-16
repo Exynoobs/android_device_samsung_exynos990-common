@@ -363,30 +363,29 @@ vendor/firmware/nfc/sec_s3nsen4_firmware.bin
 -vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL
--vendor/bin/hw/rild
 -vendor/bin/cbd
-vendor/etc/init/init.baseband.rc
-vendor/etc/init/init.vendor.rilchip.rc
-vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 -vendor/lib/libaudio-ril.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos990
--vendor/lib/libsemnativecarrierfeature.so
--vendor/lib64/libril_sem.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos990
--vendor/lib64/libsemnativecarrierfeature.so
--vendor/lib64/libSemDataProps.so
--vendor/lib64/libSemTelephonyProps.so
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
--vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+
+## RIL - from x1s - G980FXXSCDUK1
+vendor/etc/init/init.baseband.rc|d968de705a9c14ad33ea8c28bb84b4b1d6da8ae6
+vendor/etc/init/init.vendor.rilchip.rc|83d57882dfaefaaa21c5dd636bafd655dfaf0b10
+vendor/etc/init/init.vendor.rilcommon.rc|cde01a0120971494550e06ff14d6142f74423e34
+-vendor/bin/hw/rild|85f98906d824830d0e132fb63ea6adb1b99b08b9
+-vendor/lib/libril-samsung.so|1e0051d2eeaa4d7c31dbb9edac7550b3cd98cd06
+-vendor/lib/libsemnativecarrierfeature.so|d280604d21163b87ca731df9b9d95d09b39f3c2a
+-vendor/lib64/libril-samsung.so|ae21d2979f849435331f7e5c224dd1ce61615eba
+-vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d74be
 
 # Secnative
 -vendor/lib/libsecnativefeature.so
