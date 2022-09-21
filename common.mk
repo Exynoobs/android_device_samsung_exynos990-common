@@ -63,9 +63,6 @@ PRODUCT_PACKAGES += \
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/sysconfig/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64.exynos990 \
