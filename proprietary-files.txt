@@ -249,6 +249,9 @@ vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
 -vendor/lib64/libcommon.so
 -vendor/lib64/libir.so
 
+## Exynos Multi-Format Codec (MFC) Firmware
+vendor/firmware/mfc_fw.bin
+
 # Fingerprint
 -vendor/lib/libbauthserver.so
 -vendor/lib/libbauthtzcommon.so
@@ -276,7 +279,6 @@ vendor/firmware/libenf_uv.elf
 vendor/firmware/libivp.elf
 vendor/firmware/liblog.elf
 vendor/firmware/libnn.elf
-vendor/firmware/mfc_fw.bin
 vendor/firmware/rgb2bayer.bin
 vendor/firmware/usbin.bin
 vendor/firmware/usbout.bin
