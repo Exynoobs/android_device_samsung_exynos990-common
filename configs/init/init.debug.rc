@@ -1,0 +1,9 @@
+on fs
+    rm /cache/logcat.exynos990.txt
+    start logcat_cache
+
+service logcat_cache /system/bin/logcat -b all -f /cache/logcat.exynos990.txt -v threadtime
+    class main
+    user root
+    group system
+    disabled

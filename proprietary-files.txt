@@ -1,10 +1,10 @@
-# Proprietary files - from Samsung package version FXXUEFVG5, unless pinned
+# Proprietary files - from Samsung package version FXXUFGVL5, unless pinned
 
 # AptX - from crosshatch - QP1A.190711.020
 -system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Audio
-vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_board_info.xml
 vendor/etc/audio_effects_common.conf
@@ -435,7 +435,6 @@ vendor/tee/00000000-0000-0000-0000-000048444350
 vendor/tee/00000000-0000-0000-0000-0050524f4341
 vendor/tee/00000000-0000-0000-0000-00535453540c
 vendor/tee/00000000-0000-0000-0000-00575644524d
-vendor/tee/00000000-0000-0000-0000-446e6c6f6164
 vendor/tee/00000000-0000-0000-0000-53454d655345
 vendor/tee/00000000-0000-0000-0000-5354494d4552
 vendor/tee/00000000-0000-0000-0000-564c544b5052
@@ -451,10 +450,10 @@ vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
 
 # Secure Element
--vendor/bin/hw/android.hardware.secure_element@1.0-service
-vendor/etc/init/android.hardware.secure_element@1.0-service.rc
+-vendor/bin/hw/android.hardware.secure_element@1.2-service
+vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/etc/libse-gto-hal.conf
--vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
+-vendor/lib64/android.hardware.secure_element-impl-gto.so
 
 # Sensors
 -vendor/lib/sensors.flicker.so
