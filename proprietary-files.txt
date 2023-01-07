@@ -1,10 +1,10 @@
-# Proprietary files - from Samsung package version FXXUEFVG5, unless pinned
+# Proprietary files - from Samsung package version FXXUFGVL5, unless pinned
 
 # AptX - from raven - TP1A.220624.021
 -system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Audio
-vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_board_info.xml
 vendor/etc/audio_effects_common.conf
@@ -86,6 +86,7 @@ vendor/firmware/volumemonitor.bin
 -vendor/lib/libprofileparamstorage.so
 -vendor/lib/libsecaudiocoreutils.so
 -vendor/lib/libsecaudioinfo.so
+-vendor/lib/libspatializerparamstorage.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
 -vendor/lib/soundfx/libaudiosaplus_sec.so
 -vendor/lib/soundfx/libmysound.so
@@ -110,8 +111,6 @@ vendor/firmware/volumemonitor.bin
 -vendor/lib/liblastaboxmsg.so
 -vendor/lib/lib_lvacfs.so
 -vendor/lib64/libengmode_client.so
--vendor/lib64/libsemnativecarrierfeature.so
--vendor/lib/libsemnativecarrierfeature.so
 
 # Bluetooth
 vendor/firmware/bcm4375B1_murata.hcd
@@ -166,7 +165,6 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib64/libtriplepreview_interface.so
 -vendor/lib64/libuniapi.so
 -vendor/lib64/libuniplugin.so
--vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/libvpl.so
 -vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
@@ -375,23 +373,24 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 -vendor/lib/libaudio-ril.so
--vendor/lib/libmdf.so
--vendor/lib/libsec_semRil.so
--vendor/lib/libsecnativefeature.so
--vendor/lib/libsecure_storage.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos990
--vendor/lib64/libmdf.so
+-vendor/lib/libsemnativecarrierfeature.so
 -vendor/lib64/libril_sem.so
--vendor/lib64/libsec_semRil.so
--vendor/lib64/libsecnativefeature.so
--vendor/lib64/libsecure_storage.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos990
+-vendor/lib64/libsemnativecarrierfeature.so
+-vendor/lib64/libSemDataProps.so
+-vendor/lib64/libSemTelephonyProps.so
+-vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+
+# Secnative
+-vendor/lib/libsecnativefeature.so
+-vendor/lib64/libsecnativefeature.so
 
 # Surface Composer
 -vendor/lib/hw/hwcomposer.exynos990.so
@@ -433,7 +432,6 @@ vendor/tee/00000000-0000-0000-0000-000048444350
 vendor/tee/00000000-0000-0000-0000-0050524f4341
 vendor/tee/00000000-0000-0000-0000-00535453540c
 vendor/tee/00000000-0000-0000-0000-00575644524d
-vendor/tee/00000000-0000-0000-0000-446e6c6f6164
 vendor/tee/00000000-0000-0000-0000-53454d655345
 vendor/tee/00000000-0000-0000-0000-5354494d4552
 vendor/tee/00000000-0000-0000-0000-564c544b5052
@@ -449,10 +447,12 @@ vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
 
 # Secure Element
--vendor/bin/hw/android.hardware.secure_element@1.0-service
-vendor/etc/init/android.hardware.secure_element@1.0-service.rc
+-vendor/bin/hw/android.hardware.secure_element@1.2-service
+vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/etc/libse-gto-hal.conf
--vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
+-vendor/lib/libsec_semRil.so
+-vendor/lib64/android.hardware.secure_element-impl-gto.so
+-vendor/lib64/libsec_semRil.so
 
 # Sensors
 -vendor/lib/sensors.flicker.so
