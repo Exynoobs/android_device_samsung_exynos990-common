@@ -3,4 +3,6 @@
 get_prop(lhd, debug_level_prop);
 get_prop(lhd, product_ship_prop);
 
+allow lhd hal_system_suspend_service:service_manager find;
+
 binder_call(lhd, servicemanager)

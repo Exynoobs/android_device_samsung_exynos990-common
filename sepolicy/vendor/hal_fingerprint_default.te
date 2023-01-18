@@ -4,3 +4,5 @@ allow hal_fingerprint_default {
     efs_file
     sec_efs_file
 }:dir search;
+
+allow hal_fingerprint_default sec_efs_file:file read;
