@@ -70,6 +70,8 @@ genfscon sysfs /devices/platform/15c40000.adc/iio        u:object_r:sysfs_iio:s0
 # Input
 genfscon sysfs /devices/virtual/input/input7/enable      u:object_r:sysfs_input_writable:s0
 genfscon sysfs /devices/virtual/input/input7/poll_delay  u:object_r:sysfs_input_writable:s0
+genfscon sysfs /devices/virtual/input/input8/enable      u:object_r:sysfs_input_writable:s0
+genfscon sysfs /devices/virtual/input/input8/poll_delay  u:object_r:sysfs_input_writable:s0
 
 # INT
 genfscon sysfs /class/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
