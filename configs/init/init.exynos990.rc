@@ -145,6 +145,7 @@ on init
 
     # EPIC interfaces
     chmod 660 /dev/stune/top-app/schedtune.boost
+    chmod 660 /dev/stune/top-app/schedtune.prefer_perf
     chown system system /sys/kernel/ems/global_boost
     chown system system /dev/exynos-migov
     chown system system /sys/devices/platform/exynos-migov/control/control_profile
