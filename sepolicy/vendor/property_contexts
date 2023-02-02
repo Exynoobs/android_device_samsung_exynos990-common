@@ -6,6 +6,7 @@ persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 
 # Display
 persist.sys.sf.hs_mode         u:object_r:exported_system_prop:s0
+persist.vendor.display.        u:object_r:vendor_display_prop:s0
 
 # Hardware
 ro.hardware.chipname           u:object_r:exported_default_prop:s0

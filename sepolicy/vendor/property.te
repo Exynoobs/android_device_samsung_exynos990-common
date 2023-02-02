@@ -1,6 +1,9 @@
 # Camera
 vendor_internal_prop(vendor_camera_prop)
 
+# Display
+vendor_internal_prop(vendor_display_prop)
+
 # HWC
 vendor_internal_prop(vendor_hwc_prop)
 

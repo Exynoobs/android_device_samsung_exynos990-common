@@ -79,8 +79,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.2-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.composer.hwc3-service.slsi \
+    gralloc.exynos990 \
+    libcsc \
+    libexynosgscaler \
+    libexynosscaler \
+    libexynosutils \
+    libexynosv4l2
+
+
+PRODUCT_PACKAGES += \
+    libhwjpeg
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -148,17 +158,28 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
-
 # Livedisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.exynos990
 
 # OMX
 PRODUCT_PACKAGES += \
-    libepicoperator
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.AVC.WFD.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.HEVC.WFD.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder \
+    libOMX.Exynos.VP9.Encoder \
+    libOMX.Exynos.WMV.Decoder \
+    libstagefrighthw
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -168,7 +189,8 @@ PRODUCT_COPY_FILES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.samsung-mali
+    android.hardware.memtrack-service.samsung-mali \
+    libion
 
 # Neuralnetworks
 PRODUCT_PACKAGES += \

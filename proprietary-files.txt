@@ -125,19 +125,14 @@ vendor/firmware/bcmdhd_sta.bin_b1
 # Camera dependencies
 -vendor/lib/libSEF.quram.so
 -vendor/lib/libacryl.plugin.hdr.exynos990.so
--vendor/lib/libacryl.so
 -vendor/lib/libbayergdccore.so
--vendor/lib/libcsc.so
 -vendor/lib/libexynoscamera_fakefusion.so
 -vendor/lib/libexynoscamera_fakefusion_plugin.so
 -vendor/lib/libexynoscamera_plugin.so
 -vendor/lib/libexynoscamera_plugin_utils.so
--vendor/lib/libgiantmscl.so
--vendor/lib/libhwjpeg.so
 -vendor/lib/libhwjsqz.so
 -vendor/lib/libmpbase.so
 -vendor/lib/libsensorlistener.so
--vendor/lib/libstagefrighthw.so
 -vendor/lib/libtriplecam_image_optical_zoom.so
 -vendor/lib/libtriplecam_video_optical_zoom.so
 -vendor/lib/libtriplecapture_interface.so
@@ -148,17 +143,13 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 -vendor/lib64/libSEF.quram.so
 -vendor/lib64/libbayergdccore.so
--vendor/lib64/libcsc.so
 -vendor/lib64/libexynoscamera_fakefusion.so
 -vendor/lib64/libexynoscamera_fakefusion_plugin.so
 -vendor/lib64/libexynoscamera_plugin.so
 -vendor/lib64/libexynoscamera_plugin_utils.so
--vendor/lib64/libgiantmscl.so
--vendor/lib64/libhwjpeg.so
 -vendor/lib64/libhwjsqz.so
 -vendor/lib64/libmpbase.so
 -vendor/lib64/libsensorlistener.so
--vendor/lib64/libstagefrighthw.so
 -vendor/lib64/libtriplecam_image_optical_zoom.so
 -vendor/lib64/libtriplecam_video_optical_zoom.so
 -vendor/lib64/libtriplecapture_interface.so
@@ -287,10 +278,6 @@ vendor/firmware/yuv2bayer.bin
 -vendor/lib/hw/gatekeeper.exynos990.so
 -vendor/lib64/hw/gatekeeper.exynos990.so
 
-# Gralloc
--vendor/lib/hw/gralloc.exynos990.so
--vendor/lib64/hw/gralloc.exynos990.so
-
 # GPS
 vendor/bin/hw/gps.sh
 -vendor/bin/hw/gpsd
@@ -310,10 +297,8 @@ vendor/etc/sensor/lhd.conf
 # Graphics
 -vendor/lib/egl/libGLES_mali.so
 -vendor/lib/hw/vulkan.mali.so
--vendor/lib/libion_exynos.so
 -vendor/lib64/egl/libGLES_mali.so
 -vendor/lib64/hw/vulkan.mali.so
--vendor/lib64/libion_exynos.so
 
 # Keymaster
 -vendor/lib64/libskeymaster4device.so
@@ -328,39 +313,6 @@ vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
 # NFC
 system/etc/libnfc-nci.conf:product/etc/libnfc-nci.conf
 vendor/firmware/nfc/sec_s3nsen4_firmware.bin
-
-# OMX
--vendor/lib/libExynosOMX_Core.so
--vendor/lib/libExynosOMX_Resourcemanager.so
--vendor/lib/libstagefright_omx_vendor.so
--vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
--vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
--vendor/lib/omx/libOMX.Exynos.AVC.WFD.Encoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
--vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
--vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
--vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
--vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
--vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
--vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
--vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
--vendor/lib64/libExynosOMX_Core.so
--vendor/lib64/libExynosOMX_Resourcemanager.so
--vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.AVC.WFD.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL
 -vendor/bin/cbd
@@ -392,29 +344,14 @@ vendor/etc/init/init.vendor.rilcommon.rc|cde01a0120971494550e06ff14d6142f74423e3
 -vendor/lib64/libsecnativefeature.so
 
 # Surface Composer
--vendor/lib/hw/hwcomposer.exynos990.so
--vendor/lib/libExynosHWCService.so
 -vendor/lib/libGrallocMapperCamera.so
 -vendor/lib/libepic_helper.so
--vendor/lib/libexynosdisplay.so
 -vendor/lib/libexynosgraphicbuffer.so
--vendor/lib/libexynosgscaler.so
--vendor/lib/libexynosscaler.so
--vendor/lib/libexynosutils.so
--vendor/lib/libexynosv4l2.so
 -vendor/lib/libhdr10p_m2l.exynos990.so
--vendor/lib64/hw/hwcomposer.exynos990.so
--vendor/lib64/libExynosHWCService.so
 -vendor/lib64/libGrallocMapperCamera.so
 -vendor/lib64/libacryl.plugin.hdr.exynos990.so
--vendor/lib64/libacryl.so
 -vendor/lib64/libepic_helper.so
--vendor/lib64/libexynosdisplay.so
 -vendor/lib64/libexynosgraphicbuffer.so
--vendor/lib64/libexynosgscaler.so
--vendor/lib64/libexynosscaler.so
--vendor/lib64/libexynosutils.so
--vendor/lib64/libexynosv4l2.so
 -vendor/lib64/libhdr10p_m2l.exynos990.so
 
 # Teegris
