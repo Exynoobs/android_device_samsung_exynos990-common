@@ -20,6 +20,9 @@ BUILD_BROKEN_DUP_RULES := true
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
+## Inherit from the BSP configuration
+include hardware/samsung_slsi-linaro/config/BoardConfig990.mk
+
 ## Inherit proprietary vendor configuartion
 include vendor/samsung/exynos990-common/BoardConfigVendor.mk
 
