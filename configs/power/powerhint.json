@@ -1,6 +1,15 @@
 {
     "Nodes": [
         {
+            "Name": "MemFreq",
+            "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
+            "Values": [
+                "2730000",
+                "421000"
+            ],
+      "ResetOnInit": true
+        },
+        {
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
@@ -39,6 +48,26 @@
                 "455000",
                 "-1"
             ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "LPMDisable",
+            "Path": "/sys/power/cstate_control",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "KERNEL_APP_START_NOTIFY",
+            "Path": "/sys/kernel/mm/vmscan/am_app_launch",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
@@ -98,6 +127,12 @@
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "DVFSMaxLock",
             "Duration": 0,
             "Value": "455000"
@@ -116,6 +151,12 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "TASchedtuneBoost",
             "Duration": 0,
             "Value": "20"
@@ -128,6 +169,12 @@
         },
         {
             "PowerHint": "LAUNCH",
+            "Node": "MemFreq",
+            "Duration": 5000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "LAUNCH",
             "Node": "CPUMinFreq",
             "Duration": 5000,
             "Value": "2730000"
@@ -137,6 +184,18 @@
             "Node": "DVFSMinLock",
             "Duration": 5000,
             "Value": "800000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "KERNEL_APP_START_NOTIFY",
+            "Duration": 5000,
+            "Value": "1"
         },
         {
             "PowerHint": "LAUNCH",
@@ -158,6 +217,12 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
+            "Node": "MemFreq",
+            "Duration": 5000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUMinFreq",
             "Duration": 1000,
             "Value": "2730000"
@@ -167,6 +232,18 @@
             "Node": "DVFSMinLock",
             "Duration": 1000,
             "Value": "800000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "KERNEL_APP_START_NOTIFY",
+            "Duration": 1000,
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -194,9 +271,15 @@
         },
         {
             "PowerHint": "CAMERA_SHOT",
+            "Node": "MemFreq",
+            "Duration": 5000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
             "Node": "CPUMinFreq",
             "Duration": 1000,
-            "Value": "1930195"
+            "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_SHOT",

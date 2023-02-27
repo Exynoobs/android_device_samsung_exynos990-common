@@ -77,7 +77,7 @@ genfscon sysfs /devices/virtual/input/input8/enable      u:object_r:sysfs_input_
 genfscon sysfs /devices/virtual/input/input8/poll_delay  u:object_r:sysfs_input_writable:s0
 
 # INT
-genfscon sysfs /class/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
+genfscon sysfs /devices/platform/17000020.devfreq_int/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
 
 # LCD
 genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/SVC_OCTA       u:object_r:sysfs_lcd_writable:s0
@@ -88,7 +88,7 @@ genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/window_type    u:object_r
 genfscon sysfs /devices/platform/18500000.mali/power_policy           u:object_r:sysfs_mali_writable:s0
 
 # MIF
-genfscon sysfs /class/devfreq/17000010.devfreq_mif/scaling_devfreq_min   u:object_r:sysfs_mif_writable:s0
+genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min   u:object_r:sysfs_mif_writable:s0
 
 # NPU
 genfscon sysfs /devices/platform/npu_exynos/version                      u:object_r:sysfs_npu_version:s0
