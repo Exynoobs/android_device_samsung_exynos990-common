@@ -173,21 +173,6 @@ on post-fs
     chown system system  /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
     chown system system  /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
 
-    # System Performance - Permissions for input_booster
-    chown system system /sys/class/input_booster/touch/level
-    chown system system /sys/class/input_booster/touch/head
-    chown system system /sys/class/input_booster/touch/tail
-    chown system system /sys/class/input_booster/multitouch/level
-    chown system system /sys/class/input_booster/multitouch/head
-    chown system system /sys/class/input_booster/multitouch/tail
-
-    chmod 664 /sys/class/input_booster/touch/level
-    chmod 664 /sys/class/input_booster/touch/head
-    chmod 664 /sys/class/input_booster/touch/tail
-    chmod 664 /sys/class/input_booster/multitouch/level
-    chmod 664 /sys/class/input_booster/multitouch/head
-    chmod 664 /sys/class/input_booster/multitouch/tail
-
 on post-fs-data
     mkdir /dev/socket/stork 0770 system system
 
