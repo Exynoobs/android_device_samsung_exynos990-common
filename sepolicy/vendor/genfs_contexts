@@ -50,9 +50,6 @@ genfscon sysfs /devices/platform/19070000.decon_t/vsync          u:object_r:sysf
 # Display
 genfscon sysfs /devices/platform/10ab0000.displayport/extcon/extcon0/cable.0/state   u:object_r:sysfs_displayport_writable:s0
 
-# Ems
-genfscon sysfs /kernel/ems/emstune/req_mode              u:object_r:sysfs_ems_writable:s0
-
 # GPS
 genfscon sysfs /devices/platform/10730000.pinctrl/gpiochip51/gpio/gpio143/value      u:object_r:sysfs_gps_writable:s0
 
@@ -76,16 +73,10 @@ genfscon sysfs /devices/virtual/input/input7/poll_delay  u:object_r:sysfs_input_
 genfscon sysfs /devices/virtual/input/input8/enable      u:object_r:sysfs_input_writable:s0
 genfscon sysfs /devices/virtual/input/input8/poll_delay  u:object_r:sysfs_input_writable:s0
 
-# INT
-genfscon sysfs /devices/platform/17000020.devfreq_int/devfreq/17000020.devfreq_int/scaling_devfreq_min     u:object_r:sysfs_int_writable:s0
-
 # LCD
 genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/SVC_OCTA       u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/lcd_type       u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/panel_drv@0/lcd/panel/window_type    u:object_r:sysfs_lcd_writable:s0
-
-# Mali
-genfscon sysfs /devices/platform/18500000.mali/power_policy           u:object_r:sysfs_mali_writable:s0
 
 # MIF
 genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min   u:object_r:sysfs_mif_writable:s0
@@ -95,6 +86,7 @@ genfscon sysfs /devices/platform/npu_exynos/version                      u:objec
 
 # Power
 genfscon sysfs /power/cstate_control            u:object_r:sysfs_power_writable:s0
+genfscon sysfs /power/cpuhp/set_online_cpu      u:object_r:sysfs_power_writable:s0
 
 # RTC
 genfscon sysfs /devices/platform/15940000.speedy/i2c-16/16-0000/s2mps19-rtc/rtc/rtc0/hctosys    u:object_r:sysfs_rtc:s0
@@ -108,9 +100,6 @@ genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                         
 # Touchscreen
 genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input1/enabled        u:object_r:sysfs_touchscreen_writable:s0
 genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-7/7-0048/input/input2/enabled        u:object_r:sysfs_touchscreen_writable:s0
-
-# Ufs
-genfscon sysfs /devices/platform/13100000.ufs/clkgate_enable                             u:object_r:sysfs_ufs_writable:s0
 
 # V4L
 genfscon sysfs /devices/platform/186d0000.mfc/video4linux/video6/name                    u:object_r:sysfs_v4l:s0

@@ -7,13 +7,27 @@
                 "2730000",
                 "421000"
             ],
-      "ResetOnInit": true
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUHotplugMaxCores",
+            "Path": "/sys/power/cpuhp/set_online_cpu",
+            "Values": [
+                "0xff",
+                "0x3f"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         },
         {
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
+                "2415410",
+                "2170136",
                 "1895537",
+                "1599609",
+                "1322343",
                 "-1"
             ],
             "ResetOnInit": true
@@ -24,40 +38,32 @@
             "Values": [
                 "2730000",
                 "1930195",
+                "1322343",
                 "959765",
                 "-1"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "DVFSMinLock",
-            "Path": "/sys/devices/platform/18500000.mali/dvfs_min_lock",
+            "Name": "GpuMinClock",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
                 "800000",
                 "572000",
                 "455000",
+                "260000",
                 "-1"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "DVFSMaxLock",
-            "Path": "/sys/devices/platform/18500000.mali/dvfs_max_lock",
+            "Name": "GpuMaxClock",
+            "Path": "/sys/kernel/gpu/gpu_max_clock",
             "Values": [
                 "702000",
                 "455000",
                 "-1"
             ],
-            "ResetOnInit": true
-        },
-        {
-            "Name": "LPMDisable",
-            "Path": "/sys/power/cstate_control",
-            "Values": [
-                "0",
-                "1"
-            ],
-            "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
@@ -74,18 +80,18 @@
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
-                "40",
-                "20",
-                "0"
+                "30",
+                "5"
             ],
             "ResetOnInit": true
         },
         {
-            "Name": "TASchedtunePreferPerf",
-            "Path": "/dev/stune/top-app/schedtune.prefer_perf",
+            "Name": "CDCpuset",
+            "Path": "/dev/cpuset/camera-daemon/cpus",
             "Values": [
-                "1",
-                "0"
+              "4-7",
+              "6-7",
+              "0-7"
             ],
             "ResetOnInit": true
         },
@@ -97,6 +103,16 @@
                 "64"
             ],
             "HoldFd": true
+        },
+        {
+            "Name": "LPMDisable",
+            "Path": "/sys/power/cstate_control",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         },
         {
             "Name": "DoubleTapToWakeEnable",
@@ -127,45 +143,15 @@
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "LPMDisable",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "DVFSMaxLock",
+            "Node": "GpuMaxClock",
             "Duration": 0,
             "Value": "455000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUMinFreq",
-            "Duration": 0,
-            "Value": "959765"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "DVFSMinLock",
-            "Duration": 0,
-            "Value": "455000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "LPMDisable",
-            "Duration": 0,
-            "Value": "1"
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "TASchedtuneBoost",
             "Duration": 0,
-            "Value": "20"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "TASchedtunePreferPerf",
-            "Duration": 0,
-            "Value": "1"
+            "Value": "30"
         },
         {
             "PowerHint": "LAUNCH",
@@ -181,15 +167,9 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "DVFSMinLock",
+            "Node": "GpuMinClock",
             "Duration": 5000,
             "Value": "800000"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "LPMDisable",
-            "Duration": 5000,
-            "Value": "1"
         },
         {
             "PowerHint": "LAUNCH",
@@ -199,13 +179,7 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "TASchedtuneBoost",
-            "Duration": 5000,
-            "Value": "40"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "TASchedtunePreferPerf",
+            "Node": "LPMDisable",
             "Duration": 5000,
             "Value": "1"
         },
@@ -218,7 +192,7 @@
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "MemFreq",
-            "Duration": 5000,
+            "Duration": 1000,
             "Value": "2730000"
         },
         {
@@ -229,15 +203,15 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "DVFSMinLock",
+            "Node": "GpuMinClock",
             "Duration": 1000,
             "Value": "800000"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "LPMDisable",
+            "Node": "CDCpuset",
             "Duration": 1000,
-            "Value": "1"
+            "Value": "4-7"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -247,13 +221,7 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "TASchedtuneBoost",
-            "Duration": 1000,
-            "Value": "40"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "TASchedtunePreferPerf",
+            "Node": "LPMDisable",
             "Duration": 1000,
             "Value": "1"
         },
@@ -262,6 +230,24 @@
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
             "Value": "2c"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_HIGH",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "1895537"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_HIGH",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "6-7"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_HIGH",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -270,21 +256,69 @@
             "Value": "1895537"
         },
         {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "6-7"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_LOW",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "1895537"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_LOW",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "6-7"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_LOW",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_SECURE",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "1895537"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_SECURE",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "6-7"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_SECURE",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
             "PowerHint": "CAMERA_SHOT",
             "Node": "MemFreq",
-            "Duration": 5000,
+            "Duration": 300,
             "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_SHOT",
             "Node": "CPUMinFreq",
-            "Duration": 1000,
+            "Duration": 300,
             "Value": "2730000"
         },
         {
             "PowerHint": "CAMERA_SHOT",
             "Node": "PMQoSCpuDmaLatency",
-            "Duration": 1000,
+            "Duration": 300,
             "Value": "2c"
         },
         {
@@ -301,15 +335,39 @@
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "DVFSMinLock",
+            "Node": "GpuMinClock",
             "Duration": 0,
             "Value": "572000"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "DVFSMaxLock",
+            "Node": "GpuMaxClock",
             "Duration": 0,
             "Value": "702000"
+        },
+        {
+            "PowerHint": "FIXED_PERFORMANCE",
+            "Node": "CPUMinFreq",
+            "Duration": 0,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "LOW_POWER",
+            "Node": "CPUHotplugMaxCores",
+            "Duration": 0,
+            "Value": "0x3f"
+        },
+        {
+            "PowerHint": "FP_BOOST",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "2730000"
+        },
+        {
+            "PowerHint": "ML_ACC",
+            "Node": "PMQoSCpuDmaLatency",
+            "Duration": 2000,
+            "Value": "2c"
         },
         {
             "PowerHint": "INTERACTIVE",
