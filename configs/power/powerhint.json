@@ -37,6 +37,7 @@
             "Path": "/sys/power/cpufreq_min_limit",
             "Values": [
                 "2730000",
+                "2623359",
                 "1930195",
                 "1322343",
                 "959765",
@@ -92,6 +93,15 @@
               "4-7",
               "6-7",
               "0-7"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "ForegroundCpuset",
+            "Path": "/dev/cpuset/foreground/cpus",
+            "Values": [
+              "0-5",
+              "0-2,4-7"
             ],
             "ResetOnInit": true
         },
@@ -163,13 +173,7 @@
             "PowerHint": "LAUNCH",
             "Node": "CPUMinFreq",
             "Duration": 5000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "GpuMinClock",
-            "Duration": 5000,
-            "Value": "800000"
+            "Value": "2623359"
         },
         {
             "PowerHint": "LAUNCH",
@@ -182,6 +186,12 @@
             "Node": "LPMDisable",
             "Duration": 5000,
             "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "ForegroundCpuset",
+            "Duration": 5000,
+            "Value": "0-5"
         },
         {
             "PowerHint": "LAUNCH",
@@ -199,13 +209,7 @@
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUMinFreq",
             "Duration": 1000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "GpuMinClock",
-            "Duration": 1000,
-            "Value": "800000"
+            "Value": "2623359"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
