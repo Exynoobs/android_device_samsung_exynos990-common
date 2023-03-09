@@ -362,12 +362,6 @@
             "Value": "0x3f"
         },
         {
-            "PowerHint": "FP_BOOST",
-            "Node": "CPUMinFreq",
-            "Duration": 1000,
-            "Value": "2730000"
-        },
-        {
             "PowerHint": "ML_ACC",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 2000,
