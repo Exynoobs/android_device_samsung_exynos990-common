@@ -1059,7 +1059,7 @@
           <item>50</item>
       </integer-array>
       <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-          <item>5</item>
+          <item>3</item>
       </integer-array>
 
     <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
