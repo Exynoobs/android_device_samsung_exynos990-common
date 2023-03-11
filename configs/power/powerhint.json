@@ -23,11 +23,7 @@
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
-                "2415410",
-                "2170136",
                 "1895537",
-                "1599609",
-                "1322343",
                 "-1"
             ],
             "ResetOnInit": true
@@ -38,9 +34,7 @@
             "Values": [
                 "2730000",
                 "2623359",
-                "1930195",
-                "1322343",
-                "959765",
+                "1100000",
                 "-1"
             ],
             "ResetOnInit": true
@@ -49,10 +43,7 @@
             "Name": "GpuMinClock",
             "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
-                "800000",
                 "572000",
-                "455000",
-                "260000",
                 "-1"
             ],
             "ResetOnInit": true
