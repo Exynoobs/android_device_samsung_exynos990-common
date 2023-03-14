@@ -7,14 +7,11 @@
 vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/audio_board_info.xml
-vendor/etc/audio_effects_common.conf
-vendor/etc/audio_effects_sec.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
 vendor/etc/mixer_paths.xml
 vendor/etc/mixer_usb_default.xml
 vendor/etc/mixer_usb_gray.xml
-vendor/etc/mixer_usb_white.xml
 vendor/etc/playback_record_audio_policy_configuration.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/usb_audio_policy_configuration.xml
@@ -73,10 +70,7 @@ vendor/firmware/volumemonitor.bin
 -vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos990
 -vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos990
 -vendor/lib/libSamsungPostProcessConvertor.so
--vendor/lib/lib_SoundAlive_3DPosition_ver202.so
--vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 -vendor/lib/lib_SoundAlive_SRC384_ver320.so
--vendor/lib/lib_SoundAlive_play_plus_ver400.so
 -vendor/lib/lib_soundaliveresampler.so
 -vendor/lib/libaboxpcmdump.so
 -vendor/lib/libalsautils_sec.so
@@ -88,29 +82,17 @@ vendor/firmware/volumemonitor.bin
 -vendor/lib/libsecaudioinfo.so
 -vendor/lib/libspatializerparamstorage.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
--vendor/lib/soundfx/libaudiosaplus_sec.so
--vendor/lib/soundfx/libmysound.so
--vendor/lib/soundfx/libmyspace.so
--vendor/lib/soundfx/libplaybackrecorder.so
 -vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
--vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
--vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
--vendor/lib64/lib_SoundAlive_play_plus_ver400.so
 -vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libsecaudiocoreutils.so
 -vendor/lib64/libsecaudioinfo.so
 -vendor/lib64/soundfx/libaudioeffectoffload.so
--vendor/lib64/soundfx/libaudiosaplus_sec.so
--vendor/lib64/soundfx/libmysound.so
--vendor/lib64/soundfx/libmyspace.so
--vendor/lib64/soundfx/libplaybackrecorder.so
 -vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 -vendor/lib64/libaudioparamupdate.so
 -vendor/lib/libaudioparamupdate.so
 -vendor/lib/lib_SamsungRec_08020.so
 -vendor/lib/liblastaboxmsg.so
 -vendor/lib/lib_lvacfs.so
--vendor/lib64/libengmode_client.so
 
 # Bluetooth
 vendor/firmware/bcm4375B1_murata.hcd
@@ -124,19 +106,13 @@ vendor/firmware/bcmdhd_sta.bin_b1
 
 # Camera dependencies
 -vendor/lib/libSEF.quram.so
--vendor/lib/libacryl.plugin.hdr.exynos990.so
 -vendor/lib/libbayergdccore.so
 -vendor/lib/libexynoscamera_fakefusion.so
 -vendor/lib/libexynoscamera_fakefusion_plugin.so
 -vendor/lib/libexynoscamera_plugin.so
 -vendor/lib/libexynoscamera_plugin_utils.so
 -vendor/lib/libhwjsqz.so
--vendor/lib/libmpbase.so
 -vendor/lib/libsensorlistener.so
--vendor/lib/libtriplecam_image_optical_zoom.so
--vendor/lib/libtriplecam_video_optical_zoom.so
--vendor/lib/libtriplecapture_interface.so
--vendor/lib/libtriplepreview_interface.so
 -vendor/lib/libuniapi.so
 -vendor/lib/libuniplugin.so
 -vendor/lib/libvpl.so
@@ -148,26 +124,13 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib64/libexynoscamera_plugin.so
 -vendor/lib64/libexynoscamera_plugin_utils.so
 -vendor/lib64/libhwjsqz.so
--vendor/lib64/libmpbase.so
 -vendor/lib64/libsensorlistener.so
--vendor/lib64/libtriplecam_image_optical_zoom.so
--vendor/lib64/libtriplecam_video_optical_zoom.so
--vendor/lib64/libtriplecapture_interface.so
--vendor/lib64/libtriplepreview_interface.so
 -vendor/lib64/libuniapi.so
 -vendor/lib64/libuniplugin.so
 -vendor/lib64/libvpl.so
 -vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
-
-# Camera IDDQ plugin
--vendor/lib/libIDDQD_core.so
--vendor/lib/libIDDQD_interface.so
--vendor/lib/libLocalTM_preview_core.so
--vendor/lib/libOpenCv.camera.samsung.so
--vendor/lib64/libIDDQD_core.so
--vendor/lib64/libIDDQD_interface.so
--vendor/lib64/libLocalTM_preview_core.so
--vendor/lib64/libOpenCv.camera.samsung.so
+-vendor/lib/libGrallocMapperCamera.so
+-vendor/lib64/libGrallocMapperCamera.so
 
 # Codecs
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -176,7 +139,9 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
-# Eden Runtime
+# Neural Networks
+-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
 -vendor/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service
 vendor/etc/eden/gpu/eden_kernel_64.bin
 vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
@@ -306,10 +271,6 @@ vendor/etc/sensor/lhd.conf
 -vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
 vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
 
-# Neural Networks
--vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
-
 # NFC
 system/etc/libnfc-nci.conf:product/etc/libnfc-nci.conf
 vendor/firmware/nfc/sec_s3nsen4_firmware.bin
@@ -328,6 +289,7 @@ vendor/etc/plmn_se13.bin
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+-vendor/lib64/libengmode_client.so
 
 ## RIL - from x1s - G980FXXSCDUK1
 vendor/etc/init/init.baseband.rc|d968de705a9c14ad33ea8c28bb84b4b1d6da8ae6
@@ -342,17 +304,6 @@ vendor/etc/init/init.vendor.rilcommon.rc|cde01a0120971494550e06ff14d6142f74423e3
 # Secnative
 -vendor/lib/libsecnativefeature.so
 -vendor/lib64/libsecnativefeature.so
-
-# Surface Composer
--vendor/lib/libGrallocMapperCamera.so
--vendor/lib/libepic_helper.so
--vendor/lib/libexynosgraphicbuffer.so
--vendor/lib/libhdr10p_m2l.exynos990.so
--vendor/lib64/libGrallocMapperCamera.so
--vendor/lib64/libacryl.plugin.hdr.exynos990.so
--vendor/lib64/libepic_helper.so
--vendor/lib64/libexynosgraphicbuffer.so
--vendor/lib64/libhdr10p_m2l.exynos990.so
 
 # Teegris
 vendor/etc/init/teegris_v4.rc
