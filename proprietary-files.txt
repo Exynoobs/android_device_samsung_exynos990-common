@@ -65,7 +65,6 @@ vendor/firmware/txse3.bin
 vendor/firmware/volumemonitor.bin
 -vendor/lib/hw/audio.primary.exynos990.so
 -vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
--vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 -vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 -vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos990
 -vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos990
@@ -82,13 +81,6 @@ vendor/firmware/volumemonitor.bin
 -vendor/lib/libsecaudioinfo.so
 -vendor/lib/libspatializerparamstorage.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
--vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
--vendor/lib64/libfloatingfeature.so
--vendor/lib64/libsecaudiocoreutils.so
--vendor/lib64/libsecaudioinfo.so
--vendor/lib64/soundfx/libaudioeffectoffload.so
--vendor/lib64/vendor.samsung.hardware.audio@1.0.so
--vendor/lib64/libaudioparamupdate.so
 -vendor/lib/libaudioparamupdate.so
 -vendor/lib/lib_SamsungRec_08020.so
 -vendor/lib/liblastaboxmsg.so
@@ -101,22 +93,9 @@ vendor/firmware/bcm4375B1_semco_sem.hcd
 vendor/firmware/bcmdhd_mfg.bin_b1
 vendor/firmware/bcmdhd_mon.bin_b1
 vendor/firmware/bcmdhd_sta.bin_b1
--vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 -vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
 # Camera dependencies
--vendor/lib/libSEF.quram.so
--vendor/lib/libbayergdccore.so
--vendor/lib/libexynoscamera_fakefusion.so
--vendor/lib/libexynoscamera_fakefusion_plugin.so
--vendor/lib/libexynoscamera_plugin.so
--vendor/lib/libexynoscamera_plugin_utils.so
--vendor/lib/libhwjsqz.so
--vendor/lib/libsensorlistener.so
--vendor/lib/libuniapi.so
--vendor/lib/libuniplugin.so
--vendor/lib/libvpl.so
--vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 -vendor/lib64/libSEF.quram.so
 -vendor/lib64/libbayergdccore.so
 -vendor/lib64/libexynoscamera_fakefusion.so
@@ -129,7 +108,6 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib64/libuniplugin.so
 -vendor/lib64/libvpl.so
 -vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
--vendor/lib/libGrallocMapperCamera.so
 -vendor/lib64/libGrallocMapperCamera.so
 
 # Codecs
@@ -145,25 +123,10 @@ vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
 -vendor/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service
 vendor/etc/eden/gpu/eden_kernel_64.bin
 vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
--vendor/lib/libeden_model.so
--vendor/lib/libeden_nn.so
--vendor/lib/libeden_nn_on_vendor.so
--vendor/lib/libeden_osal.so
--vendor/lib/libeden_profiler.so
--vendor/lib/libeden_rt.so
--vendor/lib/libeden_rt_stub_vendor.edensdk.samsung.so
--vendor/lib/libeden_ud_cpu.so
--vendor/lib/libeden_ud_gpu.so
--vendor/lib/libeden_ud_npu.so
--vendor/lib/libeden_xtool.so
 -vendor/lib64/libeden_ud_dsp.so
--vendor/lib/libeden_ud_dsp.so
 -vendor/lib64/libgraphgen_api.so
 -vendor/lib64/libgraphgen_ann_import.so
 -vendor/lib64/libenn_dsp_kernels_cpu.so
--vendor/lib/libenn_dsp_kernels_cpu.so
--vendor/lib/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so
--vendor/lib/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
 -vendor/lib64/libeden_model.so
 -vendor/lib64/libeden_nn.so
 -vendor/lib64/libeden_nn_on_vendor.so
@@ -188,10 +151,8 @@ vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
 -vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so
 -vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
 -vendor/lib64/libenn_dsp_dal.so
--vendor/lib/libenn_dsp_dal.so
 -vendor/lib64/libgraphgen_import.so
 -vendor/lib64/libenn_dsp_fw_graph_parser.so
--vendor/lib/libenn_dsp_fw_graph_parser.so
 -vendor/lib64/libgraphgen_misc.so
 -vendor/lib64/libgraphgen_ann_nnc.so
 -vendor/lib64/libgraphgen_network.so
@@ -207,12 +168,6 @@ vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
 vendor/firmware/mfc_fw.bin
 
 # Fingerprint
--vendor/lib/libbauthserver.so
--vendor/lib/libbauthtzcommon.so
--vendor/lib/libegis_fp_normal_sensor_test.so
--vendor/lib/libgf_in_system_lib.so
--vendor/lib/libqfp_sensortest.so
--vendor/lib/libsynaFpSensorTestNwd.so
 -vendor/lib64/libbauthserver.so
 -vendor/lib64/libbauthtzcommon.so
 -vendor/lib64/libegis_fp_normal_sensor_test.so
@@ -240,7 +195,6 @@ vendor/firmware/vts.bin
 vendor/firmware/yuv2bayer.bin
 
 # Gatekeeper
--vendor/lib/hw/gatekeeper.exynos990.so
 -vendor/lib64/hw/gatekeeper.exynos990.so
 
 # GPS
@@ -283,6 +237,7 @@ vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 -vendor/lib/libaudio-ril.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos990
+-vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos990
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
@@ -296,8 +251,6 @@ vendor/etc/init/init.baseband.rc|d968de705a9c14ad33ea8c28bb84b4b1d6da8ae6
 vendor/etc/init/init.vendor.rilchip.rc|83d57882dfaefaaa21c5dd636bafd655dfaf0b10
 vendor/etc/init/init.vendor.rilcommon.rc|cde01a0120971494550e06ff14d6142f74423e34
 -vendor/bin/hw/rild|85f98906d824830d0e132fb63ea6adb1b99b08b9
--vendor/lib/libril-samsung.so|1e0051d2eeaa4d7c31dbb9edac7550b3cd98cd06
--vendor/lib/libsemnativecarrierfeature.so|d280604d21163b87ca731df9b9d95d09b39f3c2a
 -vendor/lib64/libril-samsung.so|ae21d2979f849435331f7e5c224dd1ce61615eba
 -vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d74be
 
@@ -309,8 +262,6 @@ vendor/etc/init/init.vendor.rilcommon.rc|cde01a0120971494550e06ff14d6142f74423e3
 vendor/etc/init/teegris_v4.rc
 -vendor/bin/tzdaemon
 -vendor/bin/tzts_daemon
--vendor/lib/libuuid.so
--vendor/lib/libteecl.so
 -vendor/lib64/libteecl.so
 -vendor/lib64/libuuid.so
 vendor/tee/00000000-0000-0000-0000-000000010081
@@ -335,14 +286,10 @@ vendor/tee/tui/resolution_common/ID00000100
 -vendor/bin/hw/android.hardware.secure_element@1.2-service
 vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/etc/libse-gto-hal.conf
--vendor/lib/libsec_semRil.so
 -vendor/lib64/android.hardware.secure_element-impl-gto.so
 -vendor/lib64/libsec_semRil.so
 
 # Sensors
--vendor/lib/sensors.flicker.so
--vendor/lib/sensors.grip.so
--vendor/lib/sensors.sensorhub.so
 -vendor/lib64/sensors.flicker.so
 -vendor/lib64/sensors.grip.so
 -vendor/lib64/sensors.sensorhub.so
