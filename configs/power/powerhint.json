@@ -33,8 +33,6 @@
             "Path": "/sys/power/cpufreq_min_limit",
             "Values": [
                 "2730000",
-                "2623359",
-                "1100000",
                 "-1"
             ],
             "ResetOnInit": true
@@ -73,7 +71,7 @@
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
                 "30",
-                "5"
+                "10"
             ],
             "ResetOnInit": true
         },
@@ -156,18 +154,6 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "MemFreq",
-            "Duration": 5000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUMinFreq",
-            "Duration": 5000,
-            "Value": "2623359"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "KERNEL_APP_START_NOTIFY",
             "Duration": 5000,
             "Value": "1"
@@ -189,18 +175,6 @@
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
             "Value": "2c"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "MemFreq",
-            "Duration": 1000,
-            "Value": "2730000"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUMinFreq",
-            "Duration": 1000,
-            "Value": "2623359"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
