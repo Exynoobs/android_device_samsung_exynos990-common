@@ -4,6 +4,8 @@ aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
 af.fast_track_multiplier=1
 audio.offload.min.duration.secs=30
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
@@ -22,15 +24,23 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 
-# Cmc properties
-ro.cmc.device_type=pd
-ro.cmc.version=2.0
+# Chipset
+ro.soc.manufacturer=Samsung
+ro.soc.model "Exynos 990"
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
+# DRM
+drm.service.enabled=true
+
 # Eden
+log.tag.EDEN=INFO
+log.tag.NPUC=ERROR
 ro.vendor.eden.devices=CPU1_GPU1_NPU2
 ro.vendor.eden.npu.version.path=/sys/devices/platform/npu_exynos/version
 
@@ -41,23 +51,18 @@ ro.frp.pst=/dev/block/persistent
 ro.fastbootd.available=true
 
 # Graphics
-debug.renderengine.backend=skiaglthreaded
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.recomputecrop=0
-debug.sf.use_content_detection_v2=false
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
-ro.gfx.driver.0=com.samsung.gamedriver.ex990
-ro.gfx.driver.1=com.samsung.pregpudriver.ex990
 ro.hardware.egl=mali
+ro.hardware.gralloc=exynos990
 ro.hardware.vulkan=mali
 ro.opengles.version=196610
-ro.vendor.cscsupported=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.protected_contents=1
-ro.surface_flinger.running_without_sync_framework=false
+ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=2000
 ro.surface_flinger.set_touch_timer_ms=3000
 ro.surface_flinger.set_display_power_timer_ms=200
@@ -73,31 +78,29 @@ debug.hwui.skia_atrace_enabled=false
 ro.hardware.keystore=mdfpp
 ro.security.keystore.keytype=sakv2,gak,sgak
 
+# Media
+debug.stagefright.ccodec=0
+debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank.sw-audio=1
+
+# OMX
+ro.vendor.cscsupported=1
+
 # RIL
-keyguard.no_require_sim=true
-ro.debug_level=0x494d
 ro.vendor.sec.radio.def_network=9,9
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 
-## SoC
-ro.hardware.chipname=exynos990
-ro.soc.manufacturer=Samsung
-ro.soc.model "Exynos 990"
-
-# SLSI
-debug.slsi_platform=1
-
-# Widevine
-drm.service.enabled=true
+# Samsung
+ro.product_ship=true
 
 # WiFi
 wifi.direct.interface=p2p-dev-wlan0
+
+# Zygote
+zygote.critical_window.minute=10
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
 ro.zram.periodic_wb_delay_hours=24
-
-# Zygote
-zygote.critical_window.minute=10
