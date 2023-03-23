@@ -113,7 +113,6 @@ vendor/firmware/bcmdhd_sta.bin_b1
 # Codecs
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor_sec.policy
-vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
