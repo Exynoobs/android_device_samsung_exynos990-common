@@ -79,9 +79,8 @@ ro.hardware.keystore=mdfpp
 ro.security.keystore.keytype=sakv2,gak,sgak
 
 # Media
-debug.stagefright.ccodec=0
-debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
 
 # OMX
 ro.vendor.cscsupported=1

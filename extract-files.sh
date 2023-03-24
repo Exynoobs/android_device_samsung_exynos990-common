@@ -60,14 +60,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        product/etc/libnfc-nci.conf)
-            sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
-            ;;
         vendor/bin/hw/rild)
             "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
-            ;;
-        vendor/etc/media_codecs_performance.xml)
-            sed -i '133,163d' "${2}"
             ;;
         vendor/etc/init/init.gps.rc)
             sed -i '48,62d' "${2}"
@@ -85,7 +79,7 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
-        vendor/lib*/libexynosdisplay.so|vendor/lib*/hw/hwcomposer.exynos990.so|vendor/lib*/sensors.*.so)
+        vendor/lib*/sensors.*.so)
             "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
             ;;
     esac
