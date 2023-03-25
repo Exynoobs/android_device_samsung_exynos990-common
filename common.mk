@@ -128,6 +128,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor:64
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
@@ -300,6 +303,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor:64 \
     secril_config_svc
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
+    $(COMMON_PATH)/configs/init/init.vendor.rilchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilchip.rc \
+    $(COMMON_PATH)/configs/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc    
+
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
@@ -330,6 +338,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr
 
+# Teegris
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.exynos
@@ -358,5 +370,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
+    $(COMMON_PATH)/configs/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
     $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
