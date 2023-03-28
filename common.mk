@@ -344,7 +344,10 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.exynos
+    android.hardware.thermal@2.0-service.samsung
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Touch HAL
 PRODUCT_PACKAGES += \
