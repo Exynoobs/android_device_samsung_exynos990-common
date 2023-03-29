@@ -170,6 +170,7 @@ VENDOR_SECURITY_PATCH := 2023-02-01
 
 ## SELinux
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
