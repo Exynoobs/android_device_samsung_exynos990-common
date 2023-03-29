@@ -51,8 +51,10 @@ ro.frp.pst=/dev/block/persistent
 ro.fastbootd.available=true
 
 # Graphics
+debug.renderengine.backend=skiagl
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.recomputecrop=0
+debug.sf.use_content_detection_v2=false
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
 ro.hardware.egl=mali
@@ -79,6 +81,7 @@ ro.hardware.keystore=mdfpp
 ro.security.keystore.keytype=sakv2,gak,sgak
 
 # Media
+debug.stagefright.ccodec=0
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 
