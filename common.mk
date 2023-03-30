@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.service \
+    android.hardware.soundtrigger@2.0-impl:32 \
     android.hardware.bluetooth.audio-impl \
     android.hidl.allocator@1.0.vendor \
     audio.bluetooth.default \
@@ -142,6 +143,10 @@ PRODUCT_PACKAGES += \
    libhidltransport.vendor \
    libhwbinder \
    libhwbinder.vendor
+
+# HotwordEnrollement app permissions
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
 
 # init
 PRODUCT_COPY_FILES += \
