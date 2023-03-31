@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version FXXUFHWAK, unless pinned
+# Proprietary files - from Samsung package version FXXUFHWB1, unless pinned
 
 # Audio
 -vendor/lib/hw/audio.primary.exynos990.so

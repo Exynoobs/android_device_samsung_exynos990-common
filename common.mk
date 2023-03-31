@@ -91,7 +91,6 @@ PRODUCT_PACKAGES += \
     libexynosutils \
     libexynosv4l2
 
-
 PRODUCT_PACKAGES += \
     libhwjpeg
 
