@@ -85,7 +85,7 @@ debug.hwui.skia_atrace_enabled=false
 ro.hardware.keystore=mdfpp
 ro.security.keystore.keytype=sakv2,gak,sgak
 
-# LMKD
+# LMK
 ro.lmk.filecache_min_kb=153600
 ro.lmk.kill_timeout_ms=50
 ro.lmk.stall_limit_critical=40
@@ -109,10 +109,10 @@ ro.product_ship=true
 # WiFi
 wifi.direct.interface=p2p-dev-wlan0
 
-# Zygote
-zygote.critical_window.minute=10
-
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
+
+# Zygote
+zygote.critical_window.minute=10

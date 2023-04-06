@@ -136,20 +136,11 @@ vendor/lib/hw/vulkan.mali.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/vulkan.mali.so
 
-# HotwordEnrollment
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
--product/priv-app/HotwordEnrollmentOKGoogleEx3CORTEXM4/HotwordEnrollmentOKGoogleEx3CORTEXM4.apk
--product/priv-app/HotwordEnrollmentXGoogleEx3CORTEXM4/HotwordEnrollmentXGoogleEx3CORTEXM4.apk
-
 # Keymaster
 -vendor/lib64/libskeymaster4device.so
 vendor/lib64/libkeymaster_helper.so
 vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
 vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
-
-# Listen
-vendor/lib/hw/sound_trigger.primary.exynos990.so
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
