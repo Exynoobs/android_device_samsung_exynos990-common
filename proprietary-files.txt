@@ -3,26 +3,26 @@
 # Audio
 vendor/lib/hw/audio.primary.exynos990.so
 vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
-vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
-vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos990
-vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos990
 vendor/lib/libSamsungPostProcessConvertor.so
+vendor/lib/lib_SamsungRec_08020.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_lvacfs.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
+vendor/lib/libaudioparamupdate.so
 vendor/lib/libaudioproxy.so
 vendor/lib/libdatamod.so
 vendor/lib/libfloatingfeature.so
+vendor/lib/liblastaboxmsg.so
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libspatializerparamstorage.so
 vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/libaudioparamupdate.so
-vendor/lib/lib_SamsungRec_08020.so
-vendor/lib/liblastaboxmsg.so
-vendor/lib/lib_lvacfs.so
+vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
+vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos990
+vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos990
 
 # Audio (Firmware)
 vendor/firmware/APSV_AUDIO_SLSI.bin
@@ -86,6 +86,7 @@ vendor/firmware/bcmdhd_sta.bin_b1
 vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
 # Camera
+vendor/lib64/libGrallocMapperCamera.so
 vendor/lib64/libSEF.quram.so
 vendor/lib64/libbayergdccore.so
 vendor/lib64/libexynoscamera_fakefusion.so
@@ -99,7 +100,6 @@ vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvpl.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
-vendor/lib64/libGrallocMapperCamera.so
 
 # Exynos Multi-Format Codec (MFC) Firmware
 vendor/firmware/mfc_fw.bin
@@ -137,21 +137,19 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/vulkan.mali.so
 
 # Keymaster
--vendor/lib64/libskeymaster4device.so
-vendor/lib64/libkeymaster_helper.so
 vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
 vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
+vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libskeymaster4device.so
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
 vendor/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service
 vendor/etc/eden/gpu/eden_kernel_64.bin
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
 vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
-vendor/lib64/libeden_ud_dsp.so
-vendor/lib64/libgraphgen_api.so
-vendor/lib64/libgraphgen_ann_import.so
-vendor/lib64/libenn_dsp_kernels_cpu.so
+vendor/lib64/libcommon.so
+vendor/lib64/libcrane_compiler.so
 vendor/lib64/libeden_model.so
 vendor/lib64/libeden_nn.so
 vendor/lib64/libeden_nn_on_vendor.so
@@ -160,11 +158,25 @@ vendor/lib64/libeden_profiler.so
 vendor/lib64/libeden_rt.so
 vendor/lib64/libeden_rt_stub_vendor.edensdk.samsung.so
 vendor/lib64/libeden_ud_cpu.so
+vendor/lib64/libeden_ud_dsp.so
 vendor/lib64/libeden_ud_gpu.so
 vendor/lib64/libeden_ud_npu.so
 vendor/lib64/libeden_wrapper.so
 vendor/lib64/libeden_wrapper_sdk.so
 vendor/lib64/libeden_xtool.so
+vendor/lib64/libenn_dsp_dal.so
+vendor/lib64/libenn_dsp_fw_graph_parser.so
+vendor/lib64/libenn_dsp_kernels_cpu.so
+vendor/lib64/libgraphgen_ann_import.so
+vendor/lib64/libgraphgen_ann_nnc.so
+vendor/lib64/libgraphgen_api.so
+vendor/lib64/libgraphgen_export.so
+vendor/lib64/libgraphgen_import.so
+vendor/lib64/libgraphgen_intermediate_process.so
+vendor/lib64/libgraphgen_misc.so
+vendor/lib64/libgraphgen_network.so
+vendor/lib64/libir.so
+vendor/lib64/libnpu_compiler.so
 vendor/lib64/libnpuc_api.so
 vendor/lib64/libnpuc_backend.so
 vendor/lib64/libnpuc_cmdq.so
@@ -173,21 +185,9 @@ vendor/lib64/libnpuc_controller.so
 vendor/lib64/libnpuc_frontend.so
 vendor/lib64/libnpuc_graph.so
 vendor/lib64/libnpuc_template.so
+vendor/lib64/libsait_npu_compiler.so
 vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so
 vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
-vendor/lib64/libenn_dsp_dal.so
-vendor/lib64/libgraphgen_import.so
-vendor/lib64/libenn_dsp_fw_graph_parser.so
-vendor/lib64/libgraphgen_misc.so
-vendor/lib64/libgraphgen_ann_nnc.so
-vendor/lib64/libgraphgen_network.so
-vendor/lib64/libgraphgen_intermediate_process.so
-vendor/lib64/libgraphgen_export.so
-vendor/lib64/libcrane_compiler.so
-vendor/lib64/libnpu_compiler.so
-vendor/lib64/libsait_npu_compiler.so
-vendor/lib64/libcommon.so
-vendor/lib64/libir.so
 
 # Neural Networks (Firmware)
 vendor/firmware/NPU_NFD_P4.7.tflite
@@ -219,6 +219,7 @@ vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib/libaudio-ril.so
 vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos990
+vendor/lib64/libengmode_client.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos990
 vendor/lib64/libvkmanager_vendor.so
@@ -226,7 +227,6 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/libengmode_client.so
 
 # RIL - from x1s - G980FXXSCDUK1
 vendor/bin/hw/rild|85f98906d824830d0e132fb63ea6adb1b99b08b9
